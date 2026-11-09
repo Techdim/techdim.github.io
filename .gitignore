@@ -1,0 +1,12 @@
+# === KETHER_1 ZERO-TRUST SECURITY SHIELD ===
+.env
+.env.*
+*.pem
+*.key
+*.pfx
+*.kdbx
+*token*
+*credential*
+*.log
+.DS_Store
+# === END KETHER_1 ZERO-TRUST SHIELD ===

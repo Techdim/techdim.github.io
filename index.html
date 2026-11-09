@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECHDIM — Engenharia Soberana & Inteligência Artificial</title>
+    <meta name="description" content="Organização de tecnologia focada em arquiteturas de alta resiliência, inteligência artificial agêntica, computação visual 3D e governança de software.">
+    <meta name="author" content="TECHDIM INOVA SIMPLES (I.S.) - ME">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://techdim.github.io/">
+
+    <!-- Open Graph / Redes Sociais -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://techdim.github.io/">
+    <meta property="og:title" content="TECHDIM — Engenharia Soberana & Inteligência Artificial">
+    <meta property="og:description" content="Inovação Simples, Arquitetura de Alta Resiliência, Inteligência Artificial Multimodal e Manufatura Digital.">
+    <meta property="og:locale" content="pt_BR">
+
+    <style>
+        :root {
+            --bg-primary: #0a0e17;
+            --bg-secondary: #111827;
+            --bg-card: rgba(17, 24, 39, 0.75);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(59, 130, 246, 0.4);
+            --text-primary: #f9fafb;
+            --text-secondary: #9ca3af;
+            --text-muted: #6b7280;
+            --accent-blue: #3b82f6;
+            --accent-cyan: #06b6d4;
+            --accent-gold: #f59e0b;
+            --accent-emerald: #10b981;
+            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-family);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Ambient Glow Background */
+        .ambient-glow {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1000px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.12) 0%, rgba(6, 182, 212, 0.05) 50%, transparent 70%);
+            filter: blur(80px);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Header / Navbar */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(10, 14, 23, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-container {
+            max-width: 1160px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 700;
+            font-size: 1.25rem;
+            letter-spacing: -0.02em;
+        }
+
+        .brand-logo {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-btn {
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--accent-cyan);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            padding: 0.45rem 1rem;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .nav-btn:hover {
+            background: var(--accent-blue);
+            color: #fff;
+            border-color: var(--accent-blue);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 6rem 1.5rem 4rem;
+            max-width: 1040px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .badge-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.35rem 0.9rem;
+            background: rgba(59, 130, 246, 0.08);
+            border: 1px solid rgba(59, 130, 246, 0.25);
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            color: var(--accent-cyan);
+            margin-bottom: 1.75rem;
+        }
+
+        .badge-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: var(--accent-emerald);
+            box-shadow: 0 0 8px var(--accent-emerald);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.25rem, 5vw, 3.75rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(180deg, #ffffff 30%, #9ca3af 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: clamp(1.05rem, 2vw, 1.25rem);
+            color: var(--text-secondary);
+            max-width: 760px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.65;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-blue), #2563eb);
+            color: #fff;
+            padding: 0.75rem 1.75rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: 0 4px 20px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(37, 99, 235, 0.45);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+            padding: 0.75rem 1.75rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--border-hover);
+        }
+
+        /* Pillars Section */
+        .section-container {
+            max-width: 1160px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-tag {
+            color: var(--accent-cyan);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: var(--border-hover);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+        }
+
+        .card-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            background: rgba(59, 130, 246, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.25rem;
+            color: var(--accent-cyan);
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.55;
+        }
+
+        /* Ecosystem Portals */
+        .portals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .portal-card {
+            background: linear-gradient(145deg, rgba(17, 24, 39, 0.8), rgba(15, 23, 42, 0.4));
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.75rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        .portal-card:hover {
+            border-color: var(--accent-blue);
+            transform: translateY(-3px);
+        }
+
+        .portal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+
+        .portal-name {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .portal-badge {
+            font-size: 0.75rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.06);
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+
+        .portal-desc {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 1.25rem;
+            line-height: 1.5;
+        }
+
+        .portal-link-text {
+            color: var(--accent-cyan);
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        /* Governance & Standards Banner */
+        .governance-box {
+            background: rgba(30, 41, 59, 0.4);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .governance-box h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .governance-box p {
+            color: var(--text-secondary);
+            max-width: 680px;
+            margin: 0 auto 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .governance-badges {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .gov-tag {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            padding: 0.35rem 0.85rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border-color);
+            background: #070a10;
+            padding: 3rem 1.5rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-container {
+            max-width: 1160px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-copy {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--text-primary);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .hero {
+                padding-top: 4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="ambient-glow"></div>
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="brand">
+                <div class="brand-logo">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                        <polyline points="2 17 12 22 22 17"></polyline>
+                        <polyline points="2 12 12 17 22 12"></polyline>
+                    </svg>
+                </div>
+                TECHDIM
+            </a>
+            <ul class="nav-links">
+                <li><a href="#pilares">Pilares</a></li>
+                <li><a href="#ecossistema">Ecossistema</a></li>
+                <li><a href="#governanca">Governança</a></li>
+                <li><a href="https://techdim.com.br" target="_blank" rel="noopener noreferrer">Portal Oficial</a></li>
+            </ul>
+            <a href="mailto:contato@techdim.com.br" class="nav-btn">Contato Oficial</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="hero">
+            <div class="badge-pill">
+                <span class="badge-dot"></span>
+                Organização Oficial de Tecnologia & Engenharia Soberana
+            </div>
+            <h1>Engenharia de Sistemas, IA & Inovação Digital</h1>
+            <p>
+                A TECHDIM desenvolve soluções baseadas em arquiteturas resilientes, inteligência artificial agêntica, computação visual 3D e governança de software corporativo.
+            </p>
+            <div class="hero-actions">
+                <a href="#ecossistema" class="btn-primary">Explorar Ecossistema</a>
+                <a href="https://github.com/Techdim/.github" target="_blank" rel="noopener noreferrer" class="btn-secondary">Perfil no GitHub</a>
+            </div>
+        </section>
+
+        <!-- 4 Pillars Section -->
+        <section class="section-container" id="pilares">
+            <div class="section-header">
+                <div class="section-tag">Fundamentos Técnicos</div>
+                <h2 class="section-title">Nossos Quatro Pilares de Atuação</h2>
+            </div>
+            <div class="pillars-grid">
+                <div class="card">
+                    <div class="card-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                    </div>
+                    <h3>Inteligência Artificial & Agentes</h3>
+                    <p>Sistemas multimodais autônomos, indexação semântica, RAG local soberano e orquestração de subagentes especializados.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                        </svg>
+                    </div>
+                    <h3>Resiliência & The Keter Protocol</h3>
+                    <p>Arquitetura orientada à alta disponibilidade, cultura post-mortem blameless, isolamento criptográfico e tolerância a falhas.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                        </svg>
+                    </div>
+                    <h3>Computação Visual & Manufatura 3D</h3>
+                    <p>Ecossistema Mundo 3D Academy, renderização e modelagem headless com Blender, CAD paramétrico e calibração de manufatura aditiva.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                    </div>
+                    <h3>Infraestrutura Crítica & ReparaFácil</h3>
+                    <p>Diagnóstico preditivo de hardware, assistência avançada de TI, implementação de redes empresariais e segurança física de estações.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ecosystem Section -->
+        <section class="section-container" id="ecossistema">
+            <div class="section-header">
+                <div class="section-tag">Portfólio Integrado</div>
+                <h2 class="section-title">Portais e Iniciativas TECHDIM</h2>
+            </div>
+            <div class="portals-grid">
+                <a href="https://techdim.com.br" target="_blank" rel="noopener noreferrer" class="portal-card">
+                    <div>
+                        <div class="portal-header">
+                            <span class="portal-name">TECHDIM Corporativo</span>
+                            <span class="portal-badge">Oficial</span>
+                        </div>
+                        <p class="portal-desc">Portal principal com serviços corporativos, soluções de IA e consultoria de engenharia de software.</p>
+                    </div>
+                    <span class="portal-link-text">Acessar techdim.com.br &rarr;</span>
+                </a>
+
+                <a href="https://techdimbr.github.io/the-keter-protocol/" target="_blank" rel="noopener noreferrer" class="portal-card">
+                    <div>
+                        <div class="portal-header">
+                            <span class="portal-name">The Keter Protocol</span>
+                            <span class="portal-badge">Filosofia & Arquitetura</span>
+                        </div>
+                        <p class="portal-desc">Manifesto de engenharia, resiliência de sistemas e acervo de estudos sobre arquiteturas distribuídas.</p>
+                    </div>
+                    <span class="portal-link-text">Acessar protocolo &rarr;</span>
+                </a>
+
+                <a href="https://techdimbr.github.io/reparafacil/" target="_blank" rel="noopener noreferrer" class="portal-card">
+                    <div>
+                        <div class="portal-header">
+                            <span class="portal-name">ReparaFácil Informática</span>
+                            <span class="portal-badge">TI & Hardware</span>
+                        </div>
+                        <p class="portal-desc">Assistência técnica especializada, diagnóstico de hardware e gestão de infraestrutura de TI em Campinas/SP.</p>
+                    </div>
+                    <span class="portal-link-text">Acessar ReparaFácil &rarr;</span>
+                </a>
+
+                <a href="https://techdimbr.github.io/MUNDO3D/" target="_blank" rel="noopener noreferrer" class="portal-card">
+                    <div>
+                        <div class="portal-header">
+                            <span class="portal-name">Mundo 3D Academy</span>
+                            <span class="portal-badge">Educação & 3D</span>
+                        </div>
+                        <p class="portal-desc">Formação de modelagem 3D, IA aplicada ao design e manufatura aditiva com perfis industriais.</p>
+                    </div>
+                    <span class="portal-link-text">Conhecer academia &rarr;</span>
+                </a>
+
+                <a href="https://techdim.github.io/deivis-mayer/" target="_blank" rel="noopener noreferrer" class="portal-card">
+                    <div>
+                        <div class="portal-header">
+                            <span class="portal-name">Diretoria Executiva</span>
+                            <span class="portal-badge">Engenharia</span>
+                        </div>
+                        <p class="portal-desc">Portal executivo, perfil do Diretor Técnico Eng. Deivis Irio Mayer e artigos de engenharia.</p>
+                    </div>
+                    <span class="portal-link-text">Ver biografia executiva &rarr;</span>
+                </a>
+
+                <a href="https://github.com/Techdim" target="_blank" rel="noopener noreferrer" class="portal-card">
+                    <div>
+                        <div class="portal-header">
+                            <span class="portal-name">GitHub Organization</span>
+                            <span class="portal-badge">Repositórios</span>
+                        </div>
+                        <p class="portal-desc">Organização no GitHub com projetos de código aberto, documentações e governança central.</p>
+                    </div>
+                    <span class="portal-link-text">Ver no GitHub &rarr;</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Governance Section -->
+        <section class="section-container" id="governanca">
+            <div class="governance-box">
+                <h3>Governança, Privacidade & Divulgação Responsável</h3>
+                <p>
+                    Operamos sob rigorosos protocolos de proteção de dados (LGPD) e segurança da informação (ISO/IEC 29147). Nossos sistemas priorizam soberania local, ausência de credenciais em código e criptografia de ponta a ponta.
+                </p>
+                <div class="governance-badges">
+                    <span class="gov-tag">ISO/IEC 29147</span>
+                    <span class="gov-tag">Zero-Trust Architecture</span>
+                    <span class="gov-tag">LGPD & GDPR Compliant</span>
+                    <span class="gov-tag">Sovereign Cloud Native</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-copy">
+                &copy; TECHDIM INOVA SIMPLES (I.S.) — ME. Todos os direitos reservados. Campinas — SP, Brasil.
+            </div>
+            <div class="footer-links">
+                <a href="https://github.com/Techdim/.github/blob/main/SECURITY.md" target="_blank" rel="noopener noreferrer">Segurança</a>
+                <a href="https://github.com/Techdim/.github/blob/main/CODE_OF_CONDUCT.md" target="_blank" rel="noopener noreferrer">Conduta</a>
+                <a href="mailto:contato@techdim.com.br">contato@techdim.com.br</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
