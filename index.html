@@ -1,660 +1,1903 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TECHDIM — Engenharia Soberana & Inteligência Artificial</title>
-    <meta name="description" content="Organização de tecnologia focada em arquiteturas de alta resiliência, inteligência artificial agêntica, computação visual 3D e governança de software.">
-    <meta name="author" content="TECHDIM INOVA SIMPLES (I.S.) - ME">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://techdim.github.io/">
+  <meta charset="UTF-8" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VEF3PZHXEM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    // LGPD: visitas medidas por legítimo interesse (recusável no aviso de cookies); anúncios só com aceite
+    (function () {
+      var c = null;
+      try { c = localStorage.getItem('techdim_consent_v1'); } catch (e) {}
+      var ads = c === 'granted' ? 'granted' : 'denied';
+      gtag('consent', 'default', { analytics_storage: c === 'denied' ? 'denied' : 'granted', ad_storage: ads, ad_user_data: ads, ad_personalization: ads });
+    })();
+    gtag('js', new Date());
+    gtag('config', 'G-VEF3PZHXEM');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO Primary Meta Tags -->
+  <title>Cibersegurança e TI para Empresas em Campinas | TECHDIM</title>
+  <meta name="description" content="Segurança da informação, hardening Linux, Google Cloud e IA local para empresas. Diagnóstico de rede grátis e plantão 24/7. Campinas-SP e todo o Brasil." />
+  <meta name="author" content="Eng. Deivis Irio Mayer - TECHDIM INOVA SIMPLES" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <link rel="canonical" href="https://techdim.github.io/" />
+  <meta name="copyright" content="TECHDIM INOVA SIMPLES (I.S.) - ME" />
 
-    <!-- Open Graph / Redes Sociais -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://techdim.github.io/">
-    <meta property="og:title" content="TECHDIM — Engenharia Soberana & Inteligência Artificial">
-    <meta property="og:description" content="Inovação Simples, Arquitetura de Alta Resiliência, Inteligência Artificial Multimodal e Manufatura Digital.">
-    <meta property="og:locale" content="pt_BR">
+  <!-- Geotargeting & Local SEO (Campinas / São Paulo / Brasil) -->
+  <meta name="geo.region" content="BR-SP" />
+  <meta name="geo.placename" content="Campinas" />
+  <meta name="geo.position" content="-22.9099;-47.0626" />
+  <meta name="ICBM" content="-22.9099, -47.0626" />
 
-    <style>
-        :root {
-            --bg-primary: #0a0e17;
-            --bg-secondary: #111827;
-            --bg-card: rgba(17, 24, 39, 0.75);
-            --border-color: rgba(255, 255, 255, 0.08);
-            --border-hover: rgba(59, 130, 246, 0.4);
-            --text-primary: #f9fafb;
-            --text-secondary: #9ca3af;
-            --text-muted: #6b7280;
-            --accent-blue: #3b82f6;
-            --accent-cyan: #06b6d4;
-            --accent-gold: #f59e0b;
-            --accent-emerald: #10b981;
-            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  <!-- Generative Engine Optimization (GEO / AEO) & LLM Discovery (llms.txt) -->
+  <link rel="alternate" type="text/markdown" title="LLM Knowledge Base (llms.txt)" href="https://techdim.github.io/llms.txt" />
+  <link rel="alternate" type="text/markdown" title="LLM Full Context (llms-full.txt)" href="https://techdim.github.io/llms-full.txt" />
+  <meta name="ai-content" content="true" />
+
+  <!-- Open Graph / Facebook / WhatsApp Preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://techdim.github.io/" />
+  <meta property="og:title" content="Cibersegurança e TI para Empresas em Campinas | TECHDIM" />
+  <meta property="og:description" content="Segurança da informação, hardening Linux, Google Cloud e IA local para empresas. Diagnóstico de rede grátis e plantão 24/7. Campinas-SP e todo o Brasil." />
+  <meta property="og:image" content="https://techdim.github.io/assets/techdim-preview.jpg" />
+  <meta property="og:image:secure_url" content="https://techdim.github.io/assets/techdim-preview.jpg" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="TECHDIM" />
+  <meta property="og:see_also" content="https://github.com/Techdimbr" />
+  <meta property="og:see_also" content="https://linkedin.com/in/deivismayer" />
+
+  <!-- Twitter / X Cards -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://techdim.github.io/" />
+  <meta property="twitter:title" content="Cibersegurança e TI para Empresas em Campinas | TECHDIM" />
+  <meta property="twitter:description" content="Segurança da informação, hardening Linux, Google Cloud e IA local para empresas. Diagnóstico de rede grátis e plantão 24/7. Campinas-SP e todo o Brasil." />
+  <meta property="twitter:image" content="https://techdim.github.io/assets/techdim-preview.jpg" />
+
+  <!-- Favicon & PWA Icons -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#030712" />
+
+  <!-- Google Fonts Preconnect & Stylesheet -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" /></noscript>
+
+  <!-- Site Stylesheets -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Unified Schema.org Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "Corporation",
+        "ProfessionalService"
+      ],
+      "@id": "https://techdim.github.io/#organization",
+      "name": "TECHDIM INOVA SIMPLES (I.S.) - ME",
+      "alternateName": [
+        "TECHDIM",
+        "TECHDIM Cibersegurança",
+        "TECHDIM Kether_1"
+      ],
+      "legalName": "TECHDIM INOVA SIMPLES (I.S.) - ME",
+      "taxID": "61.933.926/0001-24",
+      "url": "https://techdim.github.io/",
+      "logo": "https://techdim.github.io/assets/techdim-official-logo.png",
+      "image": "https://techdim.github.io/assets/techdim-preview.jpg",
+      "telephone": "+55-19-99615-3276",
+      "email": "techdimbrasil@gmail.com",
+      "priceRange": "$$$",
+      "currenciesAccepted": "BRL",
+      "paymentAccepted": "PIX, Transferência Bancária, Boleto B2B",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Campinas",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -22.9099,
+        "longitude": -47.0626
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Deivis Irio Mayer",
+        "jobTitle": "Lead Cyber Defense Engineer & CTO",
+        "sameAs": [
+          "https://linkedin.com/in/deivismayer"
+        ]
+      },
+      "description": "Engenharia de Cibersegurança Defensiva, Hardening Linux Debian 13, Arquitetura Serverless em Google Cloud Platform, Inteligência Artificial Local On-Premise e Governança LGPD / ISO 27001.",
+      "knowsAbout": [
+        "Cibersegurança Defensiva",
+        "Debian 13 Hardening",
+        "Google Cloud Platform (GCP)",
+        "Terraform Infrastructure as Code",
+        "IA Soberana On-Premise Air-Gapped",
+        "RAG Corporativo Local",
+        "LGPD Compliance (Lei 13.709/2018)",
+        "ISO/IEC 27001",
+        "DFIR Forense Computacional"
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+55-19-99615-3276",
+          "contactType": "customer service",
+          "areaServed": "BR",
+          "availableLanguage": [
+            "pt-BR",
+            "en"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+55-19-99615-3276",
+          "contactType": "emergency",
+          "contactOption": "HearingImpairedSupported",
+          "hoursAvailable": "Mo-Su 00:00-24:00"
         }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+      ],
+      "sameAs": [
+        "https://github.com/Techdimbr",
+        "https://www.linkedin.com/company/techdim/",
+        "https://linkedin.com/in/deivismayer",
+        "https://www.instagram.com/techdimbr/",
+        "https://www.facebook.com/122132402349390486"
+      ],
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Campinas",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "São Paulo"
+          }
+        },
+        {
+          "@type": "Country",
+          "name": "Brasil"
         }
-
-        body {
-            background-color: var(--bg-primary);
-            color: var(--text-primary);
-            font-family: var(--font-family);
-            line-height: 1.6;
-            overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Loja TECHDIM",
+        "url": "https://techdim.github.io/loja.html"
+      },
+      "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "url": "https://techdim.github.io/trocas-e-devolucoes.html",
+        "applicableCountry": "BR",
+        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+        "merchantReturnDays": 7,
+        "returnMethod": "https://schema.org/ReturnByMail",
+        "returnFees": "https://schema.org/FreeReturn",
+        "refundType": "https://schema.org/FullRefund"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://techdim.github.io/#website",
+      "url": "https://techdim.github.io/",
+      "name": "TECHDIM",
+      "inLanguage": "pt-BR",
+      "description": "Portal oficial da TECHDIM — Cibersegurança Defensiva, Debian Hardening, Nuvem Serverless e IA Soberana.",
+      "publisher": {
+        "@id": "https://techdim.github.io/#organization"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://techdim.github.io/#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://techdim.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "ThreatScanner",
+          "item": "https://techdim.github.io/#scanner"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Soluções B2B",
+          "item": "https://techdim.github.io/#solucoes"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Portfólio Open-Core",
+          "item": "https://techdim.github.io/#produtos"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Blog",
+          "item": "https://techdim.github.io/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Contato",
+          "item": "https://techdim.github.io/#contato"
         }
-
-        /* Ambient Glow Background */
-        .ambient-glow {
-            position: fixed;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 1000px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(59, 130, 246, 0.12) 0%, rgba(6, 182, 212, 0.05) 50%, transparent 70%);
-            filter: blur(80px);
-            z-index: -1;
-            pointer-events: none;
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://techdim.github.io/#produtos-catalog",
+      "name": "Portfólio de Repositórios Públicos Open-Core TECHDIM",
+      "description": "Suíte corporativa de 10 ferramentas e blueprints auditáveis abertos no GitHub.",
+      "itemListElement": [
+        {
+          "@type": "SoftwareSourceCode",
+          "position": 1,
+          "name": "debian-hardening-framework",
+          "description": "Baseline rigoroso de segurança para Debian 13 (Trixie/Sid), CIS Benchmark, sysctl, AppArmor e nftables.",
+          "codeRepository": "https://github.com/Techdimbr/debian-hardening-framework",
+          "programmingLanguage": "Bash",
+          "license": "https://opensource.org/licenses/MIT",
+          "author": {
+            "@id": "https://techdim.github.io/#organization"
+          }
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "position": 2,
+          "name": "gcp-landing-zone-terraform",
+          "description": "Infraestrutura como código modular para Google Cloud Platform com VPC e IAM Zero Trust.",
+          "codeRepository": "https://github.com/Techdimbr/gcp-landing-zone-terraform",
+          "programmingLanguage": "HCL / Terraform",
+          "license": "https://opensource.org/licenses/MIT",
+          "author": {
+            "@id": "https://techdim.github.io/#organization"
+          }
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "position": 3,
+          "name": "driverscan-hardware-audit",
+          "description": "Auditoria forense profunda de hardware, detecção de firmwares adulterados e telemetria PCI/USB/NVMe.",
+          "codeRepository": "https://github.com/Techdimbr/driverscan-hardware-audit",
+          "programmingLanguage": "Python",
+          "license": "https://opensource.org/licenses/MIT",
+          "author": {
+            "@id": "https://techdim.github.io/#organization"
+          }
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "position": 4,
+          "name": "linux-privacy-guard",
+          "description": "Supressão sistemática de telemetria indesejada, blindagem de DNS criptografado e anonimização de logs.",
+          "codeRepository": "https://github.com/Techdimbr/linux-privacy-guard",
+          "programmingLanguage": "Bash",
+          "license": "https://opensource.org/licenses/MIT",
+          "author": {
+            "@id": "https://techdim.github.io/#organization"
+          }
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "position": 5,
+          "name": "sovereign-rag-engine",
+          "description": "Mecanismo corporativo de RAG 100% desconectado da nuvem para análise de documentos confidenciais com ChromaDB e LLMs locais.",
+          "codeRepository": "https://github.com/Techdimbr/sovereign-rag-engine",
+          "programmingLanguage": "Python",
+          "license": "https://opensource.org/licenses/MIT",
+          "author": {
+            "@id": "https://techdim.github.io/#organization"
+          }
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "position": 6,
+          "name": "unifi-controller-toolkit",
+          "description": "Orquestração, backup automatizado e políticas de firewall para redes Ubiquiti UniFi corporativas.",
+          "codeRepository": "https://github.com/Techdimbr/unifi-controller-toolkit",
+          "programmingLanguage": "Python",
+          "license": "https://opensource.org/licenses/MIT",
+          "author": {
+            "@id": "https://techdim.github.io/#organization"
+          }
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "position": 7,
+          "name": "enterprise-lgpd-scanner",
+          "description": "Varredura automatizada de bancos de dados e sistemas para localização de dados pessoais sensíveis (Lei 13.709/2018).",
+          "codeRepository": "https://github.com/Techdimbr/enterprise-lgpd-scanner",
+          "programmingLanguage": "Python",
+          "license": "https://opensource.org/licenses/MIT",
+          "author": {
+            "@id": "https://techdim.github.io/#organization"
+          }
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "position": 8,
+          "name": "linux-ir-triage-collector",
+          "description": "Coleta forense volátil automatizada em incidentes cibernéticos com preservação de hash e cadeia de custódia.",
+          "codeRepository": "https://github.com/Techdimbr/linux-ir-triage-collector",
+          "programmingLanguage": "Bash",
+          "license": "https://opensource.org/licenses/MIT",
+          "author": {
+            "@id": "https://techdim.github.io/#organization"
+          }
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "position": 9,
+          "name": "ad-linux-integrator",
+          "description": "Integração e autenticação segura de servidores Linux ao Microsoft Active Directory via SSSD e Kerberos.",
+          "codeRepository": "https://github.com/Techdimbr/ad-linux-integrator",
+          "programmingLanguage": "Bash",
+          "license": "https://opensource.org/licenses/MIT",
+          "author": {
+            "@id": "https://techdim.github.io/#organization"
+          }
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "position": 10,
+          "name": "techdim-architecture-decision-records",
+          "description": "Repositório de governança técnica registrando todas as decisões arquiteturais da TECHDIM (ADR 0001 a 0010).",
+          "codeRepository": "https://github.com/Techdimbr/techdim-architecture-decision-records",
+          "programmingLanguage": "Markdown",
+          "license": "https://opensource.org/licenses/MIT",
+          "author": {
+            "@id": "https://techdim.github.io/#organization"
+          }
         }
-
-        /* Header / Navbar */
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 50;
-            background: rgba(10, 14, 23, 0.85);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border-color);
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://techdim.github.io/#faq-schema",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Como funciona o primeiro diagnóstico técnico da TECHDIM?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O atendimento inicial é realizado diretamente pelo Eng. Deivis Irio Mayer via WhatsApp ou videoconferência. Realizamos uma varredura preliminar da arquitetura, mapeamos os principais vetores de vulnerabilidade ou custos excessivos e entregamos um parecer com o plano de ação recomendado sem qualquer compromisso."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "A TECHDIM atende clientes fora do estado de São Paulo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim! Atendemos empresas em todo o Brasil e no exterior. Nossos processos de infraestrutura como código (Terraform), auditorias remotas e gestão Cloud GCP permitem atuação remota de altíssima segurança com zero perda de eficiência."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como é garantido o sigilo e a privacidade dos dados corporativos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Todas as interações técnicas são protegidas por Acordo de Confidencialidade (NDA) mútuo com firma jurídica antes do início de qualquer diagnóstico invasivo. Além disso, somos credenciados em conformidade LGPD e ISO/IEC 27001."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Em quanto tempo é possível iniciar a blindagem ou suporte?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Para chamados de emergência (parada de servidores ou incidentes de segurança), o acionamento tático é imediato com SLA de resposta em até 15 minutos pelo Plantão 24/7. Para projetos planejados de arquitetura ou hardening, o início ocorre em até 48 horas após alinhamento do escopo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual a forma de contratação (Sprint, Projeto ou Sustentação)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oferecemos modelos flexíveis: contratação pontual por projeto (com escopo fechado e garantia de entrega) ou contratos mensais de sustentação e monitoramento contínuo com plantão tático prioritário."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quais são os 10 projetos públicos de código aberto (Open-Core) da TECHDIM?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A TECHDIM disponibiliza uma suíte open-core auditável no GitHub com 10 ferramentas corporativas: Debian Hardening Framework, GCP Landing Zone Terraform, DriverScan Hardware Audit, Linux Privacy Guard, Sovereign RAG Engine, UniFi Controller Toolkit, Enterprise LGPD Scanner, Linux IR Triage Collector, AD Linux Integrator e Architecture Decision Records (ADRs). Todos os códigos podem ser auditados publicamente em github.com/Techdimbr."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como a TECHDIM atua na adequação à LGPD (Lei 13.709/2018) e normas ISO/IEC 27001?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nossa abordagem une governança e engenharia técnica: realizamos varredura automatizada de dados pessoais sensíveis (PII em bancos e arquivos), mapeamento de fluxo de dados, políticas de criptografia ponta a ponta (TLS 1.3), controles de acesso Zero Trust e emissão do Relatório de Impacto à Proteção de Dados (RIPD), blindando sua empresa contra incidentes e penalidades da ANPD."
+          }
         }
-
-        .nav-container {
-            max-width: 1160px;
-            margin: 0 auto;
-            padding: 1rem 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+      ]
+    },
+    {
+      "@type": "Blog",
+      "@id": "https://techdim.github.io/blog/#blog",
+      "url": "https://techdim.github.io/blog/",
+      "name": "Blog TECHDIM",
+      "inLanguage": "pt-BR",
+      "description": "Radar diário de tecnologia, segurança e IA para empresas.",
+      "publisher": {
+        "@id": "https://techdim.github.io/#organization"
+      }
+    }
+  ]
+}
+  </script>
+  <!-- seo:inicio -->
+  <link rel="alternate" hreflang="pt-BR" href="https://techdim.github.io/" />
+  <link rel="alternate" hreflang="x-default" href="https://techdim.github.io/" />
+  <link rel="alternate" type="application/rss+xml" title="Blog TECHDIM" href="https://techdim.github.io/blog/feed.xml" />
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml" />
+  <meta property="og:image:width" content="1376" />
+  <meta property="og:image:height" content="768" />
+  <meta property="og:image:alt" content="TECHDIM — cibersegurança, nuvem e IA para empresas" />
+  <meta name="twitter:image:alt" content="TECHDIM — cibersegurança, nuvem e IA para empresas" />
+  <link rel="stylesheet" href="blog/blog.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://techdim.github.io/#website",
+        "url": "https://techdim.github.io/",
+        "name": "TECHDIM",
+        "inLanguage": "pt-BR",
+        "publisher": {
+          "@id": "https://techdim.github.io/#organization"
         }
-
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            text-decoration: none;
-            color: var(--text-primary);
-            font-weight: 700;
-            font-size: 1.25rem;
-            letter-spacing: -0.02em;
+      },
+      {
+        "@type": "Blog",
+        "@id": "https://techdim.github.io/blog/#blog",
+        "url": "https://techdim.github.io/blog/",
+        "name": "Blog TECHDIM",
+        "inLanguage": "pt-BR",
+        "description": "Radar diário de tecnologia, segurança e IA para empresas.",
+        "publisher": {
+          "@id": "https://techdim.github.io/#organization"
         }
-
-        .brand-logo {
-            width: 32px;
-            height: 32px;
-            border-radius: 8px;
-            background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 1.5rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 500;
-            transition: var(--transition);
-        }
-
-        .nav-links a:hover {
-            color: var(--text-primary);
-        }
-
-        .nav-btn {
-            background: rgba(59, 130, 246, 0.1);
-            color: var(--accent-cyan);
-            border: 1px solid rgba(59, 130, 246, 0.3);
-            padding: 0.45rem 1rem;
-            border-radius: 6px;
-            font-size: 0.875rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .nav-btn:hover {
-            background: var(--accent-blue);
-            color: #fff;
-            border-color: var(--accent-blue);
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 6rem 1.5rem 4rem;
-            max-width: 1040px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .badge-pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.35rem 0.9rem;
-            background: rgba(59, 130, 246, 0.08);
-            border: 1px solid rgba(59, 130, 246, 0.25);
-            border-radius: 9999px;
-            font-size: 0.85rem;
-            color: var(--accent-cyan);
-            margin-bottom: 1.75rem;
-        }
-
-        .badge-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background-color: var(--accent-emerald);
-            box-shadow: 0 0 8px var(--accent-emerald);
-        }
-
-        .hero h1 {
-            font-size: clamp(2.25rem, 5vw, 3.75rem);
-            font-weight: 800;
-            letter-spacing: -0.03em;
-            line-height: 1.15;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(180deg, #ffffff 30%, #9ca3af 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero p {
-            font-size: clamp(1.05rem, 2vw, 1.25rem);
-            color: var(--text-secondary);
-            max-width: 760px;
-            margin: 0 auto 2.5rem;
-            line-height: 1.65;
-        }
-
-        .hero-actions {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--accent-blue), #2563eb);
-            color: #fff;
-            padding: 0.75rem 1.75rem;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: var(--transition);
-            box-shadow: 0 4px 20px rgba(37, 99, 235, 0.3);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(37, 99, 235, 0.45);
-        }
-
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.05);
-            color: var(--text-primary);
-            border: 1px solid var(--border-color);
-            padding: 0.75rem 1.75rem;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: var(--border-hover);
-        }
-
-        /* Pillars Section */
-        .section-container {
-            max-width: 1160px;
-            margin: 0 auto;
-            padding: 4rem 1.5rem;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .section-tag {
-            color: var(--accent-cyan);
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .section-title {
-            font-size: 2rem;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-        }
-
-        .pillars-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 2rem;
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .card:hover {
-            transform: translateY(-4px);
-            border-color: var(--border-hover);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
-        }
-
-        .card-icon {
-            width: 44px;
-            height: 44px;
-            border-radius: 10px;
-            background: rgba(59, 130, 246, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.25rem;
-            color: var(--accent-cyan);
-        }
-
-        .card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0.75rem;
-            font-weight: 600;
-        }
-
-        .card p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            line-height: 1.55;
-        }
-
-        /* Ecosystem Portals */
-        .portals-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .portal-card {
-            background: linear-gradient(145deg, rgba(17, 24, 39, 0.8), rgba(15, 23, 42, 0.4));
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 1.75rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            text-decoration: none;
-            color: inherit;
-            transition: var(--transition);
-        }
-
-        .portal-card:hover {
-            border-color: var(--accent-blue);
-            transform: translateY(-3px);
-        }
-
-        .portal-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 1rem;
-        }
-
-        .portal-name {
-            font-size: 1.15rem;
-            font-weight: 700;
-            color: var(--text-primary);
-        }
-
-        .portal-badge {
-            font-size: 0.75rem;
-            padding: 0.2rem 0.6rem;
-            border-radius: 4px;
-            background: rgba(255, 255, 255, 0.06);
-            color: var(--text-secondary);
-            font-weight: 600;
-        }
-
-        .portal-desc {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            margin-bottom: 1.25rem;
-            line-height: 1.5;
-        }
-
-        .portal-link-text {
-            color: var(--accent-cyan);
-            font-size: 0.85rem;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 0.35rem;
-        }
-
-        /* Governance & Standards Banner */
-        .governance-box {
-            background: rgba(30, 41, 59, 0.4);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 2.5rem 2rem;
-            text-align: center;
-            margin-top: 2rem;
-        }
-
-        .governance-box h3 {
-            font-size: 1.4rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .governance-box p {
-            color: var(--text-secondary);
-            max-width: 680px;
-            margin: 0 auto 1.5rem;
-            font-size: 0.95rem;
-        }
-
-        .governance-badges {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .gov-tag {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--border-color);
-            padding: 0.35rem 0.85rem;
-            border-radius: 6px;
-            font-size: 0.8rem;
-            font-weight: 500;
-            color: var(--text-secondary);
-        }
-
-        /* Footer */
-        footer {
-            border-top: 1px solid var(--border-color);
-            background: #070a10;
-            padding: 3rem 1.5rem 2rem;
-            margin-top: 4rem;
-        }
-
-        .footer-container {
-            max-width: 1160px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-        }
-
-        .footer-copy {
-            color: var(--text-muted);
-            font-size: 0.875rem;
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 1.5rem;
-        }
-
-        .footer-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 0.875rem;
-            transition: var(--transition);
-        }
-
-        .footer-links a:hover {
-            color: var(--text-primary);
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            .hero {
-                padding-top: 4rem;
-            }
-        }
-    </style>
+      }
+    ]
+  }
+  </script>
+  <!-- seo:fim -->
 </head>
 <body>
+  <!-- Skip Link for Accessibility (WCAG 2.1 SC 2.4.1) -->
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
 
-    <div class="ambient-glow"></div>
+  <!-- Cyber Background Canvas -->
+  <div class="cyber-bg-canvas" aria-hidden="true"></div>
 
-    <!-- Header / Navbar -->
-    <header>
-        <div class="nav-container">
-            <a href="#" class="brand">
-                <div class="brand-logo">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                        <polyline points="2 17 12 22 22 17"></polyline>
-                        <polyline points="2 12 12 17 22 12"></polyline>
-                    </svg>
-                </div>
-                TECHDIM
+  <!-- ==========================================================================
+       Header & Navigation Bar
+       ========================================================================== -->
+  <header class="site-header" id="top">
+    <div class="container nav-bar">
+      <a href="#top" class="brand-wrapper">
+        <img src="assets/techdim-official-cube-icon.jpg" alt="Logo Oficial TECHDIM INOVA" class="brand-logo-img" width="50" height="50" />
+        <div class="brand-meta">
+          <span class="brand-title">TECHDIM<span>_</span></span>
+          <span class="brand-subtitle">INOVA SIMPLES // KETHER_1</span>
+        </div>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav aria-label="Navegação Principal">
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#solucoes" class="nav-link">Serviços</a></li>
+          <li><a href="#scanner" class="nav-link">Scanner</a></li>
+          <li><a href="blog/" class="nav-link">Blog</a></li>
+          <li><a href="#contato" class="nav-link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header CTAs -->
+      <div class="nav-cta-group">
+        <a href="loja.html" class="nav-cart" aria-label="Loja TECHDIM" title="Loja"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></a>
+        <a href="https://wa.me/5519996153276?text=Ol%C3%A1%2C%20gostaria%20de%20um%20diagn%C3%B3stico%20t%C3%A9cnico%20da%20TECHDIM!" 
+           class="btn-header-wa" target="_blank" rel="noopener noreferrer" 
+           title="Plantão WhatsApp Comercial">
+          <span class="live-pulse-dot" aria-hidden="true"></span>
+          <svg class="wa-ico" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3.9 2.5c.1.2 1.6 2.5 4 3.5 1.5.6 2 .7 2.8.6.4-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.4-.3z"/></svg>
+          <span class="wa-label wa-label-full">WhatsApp (19) 99615-3276</span>
+          <span class="wa-label wa-label-short">WhatsApp</span>
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir Menu" aria-controls="navMenu" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ==========================================================================
+         Hero Section
+         ========================================================================== -->
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <!-- Hero Text Column -->
+        <div class="hero-content-col">
+          <div class="hero-announcement">
+            <span class="status-pill">ONLINE</span>
+            <span class="announcement-text font-mono">SOBERANIA COMPUTACIONAL // GCP & LINUX</span>
+          </div>
+
+          <h1 class="hero-heading">
+            CIBERSEGURANÇA DEFENSIVA & <span class="gradient-text-cyber">INFRAESTRUTURA DE TI PARA EMPRESAS</span>
+          </h1>
+
+          <p class="hero-lead">
+            Transmutando entropia em ordem na infraestrutura de operações críticas. A <strong>TECHDIM</strong> projeta arquiteturas resilientes em Google Cloud, executa hardening avançado de kernel Linux Debian 13 e implanta IA corporativa com zero vazamento de dados.
+          </p>
+
+          <div class="hero-actions">
+            <a href="https://wa.me/5519996153276?text=Ol%C3%A1%20TECHDIM%2C%20gostaria%20de%20agendar%20um%20diagn%C3%B3stico%20t%C3%A9cnico%20com%20o%20arquiteto%20s%C3%AAnior." 
+               class="btn-cta-whatsapp" target="_blank" rel="noopener noreferrer">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.974.545 1.785.835 2.791.835 3.181 0 5.767-2.586 5.768-5.766 0-3.18-2.586-5.768-5.768-5.768zm7.391 5.766c-.001 4.077-3.314 7.39-7.391 7.39-1.282 0-2.484-.336-3.535-.921l-4.524 1.187 1.21-4.407c-.675-1.109-1.066-2.408-1.066-3.799.001-4.077 3.314-7.39 7.391-7.39 4.077 0 7.39 3.313 7.39 7.39z"/></svg>
+              <span>Falar no WhatsApp<span class="cta-num"> (19) 99615-3276</span></span>
             </a>
-            <ul class="nav-links">
-                <li><a href="#pilares">Pilares</a></li>
-                <li><a href="#ecossistema">Ecossistema</a></li>
-                <li><a href="#governanca">Governança</a></li>
-                <li><a href="https://techdim.com.br" target="_blank" rel="noopener noreferrer">Portal Oficial</a></li>
-            </ul>
-            <a href="mailto:contato@techdim.com.br" class="nav-btn">Contato Oficial</a>
+
+            <a href="#scanner" class="btn-cta-scanner">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span>Executar ThreatScanner</span>
+            </a>
+          </div>
+
+          <!-- Trust & Credentials Bar -->
+          <div class="hero-credentials">
+            <div class="cred-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              <span>Campinas — SP · Atendimento Nacional</span>
+            </div>
+            <div class="cred-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              <span>Google Cloud Partner Registered</span>
+            </div>
+            <div class="cred-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span>ISO/IEC 27001 & LGPD Accredited</span>
+            </div>
+          </div>
         </div>
-    </header>
 
-    <!-- Hero Section -->
-    <main>
-        <section class="hero">
-            <div class="badge-pill">
-                <span class="badge-dot"></span>
-                Organização Oficial de Tecnologia & Engenharia Soberana
+        <!-- Video & Visual Showcase -->
+        <div class="hero-visual-col">
+          <div class="video-showcase-box">
+            <div class="video-frame-head">
+              <div class="window-dots">
+                <span class="dot dot-r"></span>
+                <span class="dot dot-y"></span>
+                <span class="dot dot-g"></span>
+              </div>
+              <span class="frame-label" id="showcaseLabel">TECHDIM_OFFICIAL_CUBE_3D // CORE</span>
             </div>
-            <h1>Engenharia de Sistemas, IA & Inovação Digital</h1>
-            <p>
-                A TECHDIM desenvolve soluções baseadas em arquiteturas resilientes, inteligência artificial agêntica, computação visual 3D e governança de software corporativo.
-            </p>
-            <div class="hero-actions">
-                <a href="#ecossistema" class="btn-primary">Explorar Ecossistema</a>
-                <a href="https://github.com/Techdim/.github" target="_blank" rel="noopener noreferrer" class="btn-secondary">Perfil no GitHub</a>
-            </div>
-        </section>
 
-        <!-- 4 Pillars Section -->
-        <section class="section-container" id="pilares">
-            <div class="section-header">
-                <div class="section-tag">Fundamentos Técnicos</div>
-                <h2 class="section-title">Nossos Quatro Pilares de Atuação</h2>
-            </div>
-            <div class="pillars-grid">
-                <div class="card">
-                    <div class="card-icon">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"></path>
-                            <circle cx="12" cy="12" r="3"></circle>
-                        </svg>
-                    </div>
-                    <h3>Inteligência Artificial & Agentes</h3>
-                    <p>Sistemas multimodais autônomos, indexação semântica, RAG local soberano e orquestração de subagentes especializados.</p>
+            <div class="video-viewport" id="videoViewport">
+              <!-- Default state: Official 3D Cube Logo Showcase -->
+              <div class="cube-showcase-container">
+                <img src="assets/techdim-official-cube-logo.webp" width="800" height="800" alt="Logotipo Oficial TECHDIM INOVA 3D" class="cube-showcase-img" id="cubeShowcaseImg" fetchpriority="high" decoding="async" />
+                <div class="cube-hologram-glow"></div>
+                <div class="cube-status-pill">
+                  <span class="live-pulse-dot"></span>
+                  <span>LOGO OFICIAL // TECHDIM INOVA 2026</span>
                 </div>
-
-                <div class="card">
-                    <div class="card-icon">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-                        </svg>
-                    </div>
-                    <h3>Resiliência & The Keter Protocol</h3>
-                    <p>Arquitetura orientada à alta disponibilidade, cultura post-mortem blameless, isolamento criptográfico e tolerância a falhas.</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-                        </svg>
-                    </div>
-                    <h3>Computação Visual & Manufatura 3D</h3>
-                    <p>Ecossistema Mundo 3D Academy, renderização e modelagem headless com Blender, CAD paramétrico e calibração de manufatura aditiva.</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                            <line x1="8" y1="21" x2="16" y2="21"></line>
-                            <line x1="12" y1="17" x2="12" y2="21"></line>
-                        </svg>
-                    </div>
-                    <h3>Infraestrutura Crítica & ReparaFácil</h3>
-                    <p>Diagnóstico preditivo de hardware, assistência avançada de TI, implementação de redes empresariais e segurança física de estações.</p>
-                </div>
+                <button class="cube-play-overlay-btn" id="btnSwitchToVideo">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  <span>Assistir Vídeo Animado</span>
+                </button>
+              </div>
             </div>
-        </section>
 
-        <!-- Ecosystem Section -->
-        <section class="section-container" id="ecossistema">
-            <div class="section-header">
-                <div class="section-tag">Portfólio Integrado</div>
-                <h2 class="section-title">Portais e Iniciativas TECHDIM</h2>
+            <div class="video-mode-tabs">
+              <div style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
+                <button class="tab-btn active" id="tabLogoShowcase">Logotipo 3D</button>
+                <button class="tab-btn" id="tabVideoLocal">Vídeo Animado</button>
+                <button class="tab-btn" id="tabVideoYoutube">YouTube</button>
+              </div>
+              <span style="color: var(--cyan-neon);" class="font-mono">SISTEMA ATIVO // 2026</span>
             </div>
-            <div class="portals-grid">
-                <a href="https://techdim.com.br" target="_blank" rel="noopener noreferrer" class="portal-card">
-                    <div>
-                        <div class="portal-header">
-                            <span class="portal-name">TECHDIM Corporativo</span>
-                            <span class="portal-badge">Oficial</span>
-                        </div>
-                        <p class="portal-desc">Portal principal com serviços corporativos, soluções de IA e consultoria de engenharia de software.</p>
-                    </div>
-                    <span class="portal-link-text">Acessar techdim.com.br &rarr;</span>
-                </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                <a href="https://techdimbr.github.io/the-keter-protocol/" target="_blank" rel="noopener noreferrer" class="portal-card">
-                    <div>
-                        <div class="portal-header">
-                            <span class="portal-name">The Keter Protocol</span>
-                            <span class="portal-badge">Filosofia & Arquitetura</span>
-                        </div>
-                        <p class="portal-desc">Manifesto de engenharia, resiliência de sistemas e acervo de estudos sobre arquiteturas distribuídas.</p>
-                    </div>
-                    <span class="portal-link-text">Acessar protocolo &rarr;</span>
-                </a>
+    <!-- ==========================================================================
+         Metrics Counter Ribbon
+         ========================================================================== -->
+    <section class="stats-ribbon">
+      <div class="container stats-grid">
+        <div class="stat-item">
+          <div class="stat-val">99.98%</div>
+          <div class="stat-title">Disponibilidade e Uptime</div>
+          <div class="stat-sub">SLA em ecossistemas de missão crítica</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-val">+100k</div>
+          <div class="stat-title">Horas Economizadas</div>
+          <div class="stat-sub">Em rotinas automatizadas e seguras</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-val">0</div>
+          <div class="stat-title">Incidentes Críticos</div>
+          <div class="stat-sub">Em servidores com hardening Debian 13</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-val">15 min</div>
+          <div class="stat-title">Plantão Tático SLA</div>
+          <div class="stat-sub">Resposta emergencial 24/7 para clientes B2B</div>
+        </div>
+      </div>
+    </section>
 
-                <a href="https://techdimbr.github.io/reparafacil/" target="_blank" rel="noopener noreferrer" class="portal-card">
-                    <div>
-                        <div class="portal-header">
-                            <span class="portal-name">ReparaFácil Informática</span>
-                            <span class="portal-badge">TI & Hardware</span>
-                        </div>
-                        <p class="portal-desc">Assistência técnica especializada, diagnóstico de hardware e gestão de infraestrutura de TI em Campinas/SP.</p>
-                    </div>
-                    <span class="portal-link-text">Acessar ReparaFácil &rarr;</span>
-                </a>
+    <!-- ==========================================================================
+         ThreatScanner Kether_1 (Interactive Live Audit)
+         ========================================================================== -->
+    <section class="scanner-section" id="scanner">
+      <div class="container">
+        <div class="section-head">
+          <span class="badge-tag">DIAGNÓSTICO EM TEMPO REAL</span>
+          <h2>THREATSCANNER KETHER_1 // <span class="gradient-text-cyber">DIAGNÓSTICO DE REDE GRÁTIS</span></h2>
+          <p>
+            Diagnóstico de rede e privacidade direto no seu navegador: IP público e privado, servidor DNS, vazamento WebRTC, impressão digital do dispositivo, criptografia da conexão e teste rápido de velocidade.
+          </p>
+        </div>
 
-                <a href="https://techdimbr.github.io/MUNDO3D/" target="_blank" rel="noopener noreferrer" class="portal-card">
-                    <div>
-                        <div class="portal-header">
-                            <span class="portal-name">Mundo 3D Academy</span>
-                            <span class="portal-badge">Educação & 3D</span>
-                        </div>
-                        <p class="portal-desc">Formação de modelagem 3D, IA aplicada ao design e manufatura aditiva com perfis industriais.</p>
-                    </div>
-                    <span class="portal-link-text">Conhecer academia &rarr;</span>
-                </a>
-
-                <a href="https://techdim.github.io/deivis-mayer/" target="_blank" rel="noopener noreferrer" class="portal-card">
-                    <div>
-                        <div class="portal-header">
-                            <span class="portal-name">Diretoria Executiva</span>
-                            <span class="portal-badge">Engenharia</span>
-                        </div>
-                        <p class="portal-desc">Portal executivo, perfil do Diretor Técnico Eng. Deivis Irio Mayer e artigos de engenharia.</p>
-                    </div>
-                    <span class="portal-link-text">Ver biografia executiva &rarr;</span>
-                </a>
-
-                <a href="https://github.com/Techdim" target="_blank" rel="noopener noreferrer" class="portal-card">
-                    <div>
-                        <div class="portal-header">
-                            <span class="portal-name">GitHub Organization</span>
-                            <span class="portal-badge">Repositórios</span>
-                        </div>
-                        <p class="portal-desc">Organização no GitHub com projetos de código aberto, documentações e governança central.</p>
-                    </div>
-                    <span class="portal-link-text">Ver no GitHub &rarr;</span>
-                </a>
-            </div>
-        </section>
-
-        <!-- Governance Section -->
-        <section class="section-container" id="governanca">
-            <div class="governance-box">
-                <h3>Governança, Privacidade & Divulgação Responsável</h3>
-                <p>
-                    Operamos sob rigorosos protocolos de proteção de dados (LGPD) e segurança da informação (ISO/IEC 29147). Nossos sistemas priorizam soberania local, ausência de credenciais em código e criptografia de ponta a ponta.
+        <div class="scanner-cockpit">
+          <div class="scanner-grid">
+            <!-- Terminal Console Box -->
+            <div class="terminal-box">
+              <div class="terminal-head">
+                <span>CONSOLA TÁTICA // DIAGNÓSTICO DE REDE</span>
+                <span class="text-mono" id="scanProgress">PRONTO</span>
+              </div>
+              <div class="terminal-body" id="terminalConsole" aria-live="polite">
+                <div class="log-line cyan">[!] SCANNER PRONTO PARA EXECUÇÃO.</div>
+                <div class="log-line">[&gt;] Clique em "Iniciar Diagnóstico Completo" para analisar IP, DNS, WebRTC, fingerprint, criptografia e velocidade.</div>
+                <div class="log-line text-dark">[#] Nenhum serviço externo é consultado antes do seu clique.</div>
+              </div>
+              <div class="scanner-controls">
+                <button class="btn-scan-trigger" id="btnTriggerScan" type="button">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                  <span>Iniciar Diagnóstico Completo</span>
+                </button>
+                <button class="btn-scan-reset" id="btnResetScan" type="button" title="Limpar resultados">
+                  Resetar
+                </button>
+                <p class="scan-consent">
+                  Ao clicar em "Iniciar Diagnóstico" ou "Testar só a velocidade", você aceita os <a href="#termos-diagnostico" id="linkTermosDiagnostico">termos de uso e a política de segurança da informação</a> do diagnóstico, inclusive o registro do resultado pela TECHDIM, e assume a responsabilidade pelo uso.
                 </p>
-                <div class="governance-badges">
-                    <span class="gov-tag">ISO/IEC 29147</span>
-                    <span class="gov-tag">Zero-Trust Architecture</span>
-                    <span class="gov-tag">LGPD & GDPR Compliant</span>
-                    <span class="gov-tag">Sovereign Cloud Native</span>
+              </div>
+            </div>
+
+            <!-- Scanner Results Dashboard -->
+            <div class="scanner-results">
+              <div>
+                <div class="score-display-box">
+                  <div class="score-circle" id="scoreCircle">
+                    <span class="score-number" id="scannerScoreVal">--</span>
+                    <span class="score-label">SCORE PRIVACIDADE</span>
+                  </div>
+                  <div class="score-desc">
+                    <h3 id="scoreGradeTitle">Exposição da Conexão</h3>
+                    <p id="scoreGradeText">Nota de 0 a 100 a partir de criptografia, DNS, WebRTC e rastreabilidade do dispositivo. Execute o diagnóstico para calcular.</p>
+                  </div>
                 </div>
-            </div>
-        </section>
-    </main>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-copy">
-                &copy; TECHDIM INOVA SIMPLES (I.S.) — ME. Todos os direitos reservados. Campinas — SP, Brasil.
+                <div class="metrics-audit-list">
+                  <div class="audit-item">
+                    <span class="lbl">IP público:</span>
+                    <span class="val" id="sumIp">Aguardando</span>
+                  </div>
+                  <div class="audit-item">
+                    <span class="lbl">Provedor / ASN:</span>
+                    <span class="val" id="sumIsp">Aguardando</span>
+                  </div>
+                  <div class="audit-item">
+                    <span class="lbl">Servidor DNS:</span>
+                    <span class="val" id="sumDns">Aguardando</span>
+                  </div>
+                  <div class="audit-item">
+                    <span class="lbl">Vazamento WebRTC:</span>
+                    <span class="val" id="sumRtc">Aguardando</span>
+                  </div>
+                  <div class="audit-item">
+                    <span class="lbl">Velocidade:</span>
+                    <span class="val" id="sumSpeed">Aguardando</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Export to WhatsApp CTA Card -->
+              <div class="export-wa-card">
+                <div>
+                  <strong>Relatório Tático Completo</strong>
+                  <p>Envie os resultados para análise com o Eng. Deivis Irio Mayer.</p>
+                </div>
+                <button class="btn-export-wa" id="btnExportScanWa" type="button">
+                  <span>Exportar WhatsApp</span>
+                </button>
+              </div>
             </div>
-            <div class="footer-links">
-                <a href="https://github.com/Techdim/.github/blob/main/SECURITY.md" target="_blank" rel="noopener noreferrer">Segurança</a>
-                <a href="https://github.com/Techdim/.github/blob/main/CODE_OF_CONDUCT.md" target="_blank" rel="noopener noreferrer">Conduta</a>
-                <a href="mailto:contato@techdim.com.br">contato@techdim.com.br</a>
+          </div>
+
+          <!-- Painel detalhado do diagnóstico -->
+          <div class="diag-board" id="diagBoard">
+            <article class="diag-card" data-card="ip">
+              <header class="diag-card-head">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                <h3>Conexão &amp; IP</h3>
+                <span class="diag-pill">aguardando</span>
+              </header>
+              <dl class="diag-list">
+                <div class="diag-row" data-k="ipv4"><dt>IPv4 público</dt><dd>—</dd></div>
+                <div class="diag-row" data-k="ipv6"><dt>IPv6 público</dt><dd>—</dd></div>
+                <div class="diag-row" data-k="isp"><dt>Provedor (ASN)</dt><dd>—</dd></div>
+                <div class="diag-row" data-k="geo"><dt>Localização aproximada</dt><dd>—</dd></div>
+                <div class="diag-row" data-k="colo"><dt>Borda Cloudflare</dt><dd>—</dd></div>
+                <div class="diag-row" data-k="nettype"><dt>Tipo de rede</dt><dd>—</dd></div>
+              </dl>
+            </article>
+
+            <article class="diag-card" data-card="dns">
+              <header class="diag-card-head">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="3" width="20" height="7" rx="1.5"/><rect x="2" y="14" width="20" height="7" rx="1.5"/><path d="M6 6.5h.01M6 17.5h.01"/></svg>
+                <h3>Servidor DNS</h3>
+                <span class="diag-pill">aguardando</span>
+              </header>
+              <dl class="diag-list">
+                <div class="diag-row" data-k="dnsip"><dt>IP do resolvedor</dt><dd>—</dd></div>
+                <div class="diag-row" data-k="dnsorg"><dt>Operador do DNS</dt><dd>—</dd></div>
+                <div class="diag-row" data-k="dnskind"><dt>Classificação</dt><dd>—</dd></div>
+                <div class="diag-row" data-k="dnsecs"><dt>EDNS Client Subnet</dt><dd>—</dd></div>
+                <div class="diag-row" data-k="dnsleak"><dt>Coerência DNS × IP</dt><dd>—</dd></div>
+              </dl>
+            </article>
+
+            <article class="diag-card" data-card="crypto">
+              <header class="diag-card-head">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                <h3>Criptografia da Conexão</h3>
+                <span class="diag-pill">aguardando</span>
+              </header>
+              <dl class="diag-list">
+                <div class="diag-row" data-k="pageproto"><dt>Este site</dt><dd>—</dd></div>
+                <div class="diag-row" data-k="tls"><dt>Versão TLS</dt><dd>—</dd></div>
+                <div class="diag-row" data-k="http"><dt>Protocolo HTTP</dt><dd>—</dd></div>
+                <div class="diag-row" data-k="kex"><dt>Troca de chaves</dt><dd>—</dd></div>
+                <div class="diag-row" data-k="ech"><dt>SNI cifrado (ECH)</dt><dd>—</dd></div>
+                <div class="diag-row" data-k="warp"><dt>WARP / Zero Trust</dt><dd>—</dd></div>
+              </dl>
+            </article>
+
+            <article class="diag-card" data-card="webrtc">
+              <header class="diag-card-head">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+                <h3>Vazamento WebRTC</h3>
+                <span class="diag-pill">aguardando</span>
+              </header>
+              <dl class="diag-list">
+                <div class="diag-row" data-k="rtcsup"><dt>WebRTC no navegador</dt><dd>—</dd></div>
+                <div class="diag-row" data-k="rtclocal"><dt>IP privado (rede local)</dt><dd>—</dd></div>
+                <div class="diag-row" data-k="rtcpublic"><dt>IP público via STUN</dt><dd>—</dd></div>
+                <div class="diag-row" data-k="rtcleak"><dt>Resultado</dt><dd>—</dd></div>
+              </dl>
+            </article>
+
+            <article class="diag-card" data-card="fp">
+              <header class="diag-card-head">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 11c0 3.5-1 6.5-3 9M8 6.5A6 6 0 0 1 18 11c0 2-.3 4-1 6M5 9.5a8 8 0 0 0-.5 2.5c0 1.5-.3 3-1 4.5M12 11a2 2 0 0 0-4 0c0 2.5-.5 5-2 7M16 11.5c0 2.5-.6 5-1.8 7.5"/></svg>
+                <h3>Impressão Digital do Dispositivo</h3>
+                <span class="diag-pill">aguardando</span>
+              </header>
+              <dl class="diag-list">
+                <div class="diag-row" data-k="fpid"><dt>ID de fingerprint</dt><dd>—</dd></div>
+                <div class="diag-row" data-k="browser"><dt>Navegador &amp; sistema</dt><dd>—</dd></div>
+                <div class="diag-row" data-k="screen"><dt>Tela</dt><dd>—</dd></div>
+                <div class="diag-row" data-k="hw"><dt>CPU &amp; memória</dt><dd>—</dd></div>
+                <div class="diag-row" data-k="gpu"><dt>GPU (WebGL)</dt><dd>—</dd></div>
+                <div class="diag-row" data-k="locale"><dt>Fuso &amp; idioma</dt><dd>—</dd></div>
+                <div class="diag-row" data-k="fpprot"><dt>Proteção anti-rastreio</dt><dd>—</dd></div>
+              </dl>
+            </article>
+
+            <article class="diag-card" data-card="speed">
+              <header class="diag-card-head">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 14l4-4M3.3 19a10 10 0 1 1 17.4 0"/></svg>
+                <h3>Velocidade &amp; Latência</h3>
+                <span class="diag-pill">aguardando</span>
+              </header>
+              <div class="speed-meters">
+                <div class="speed-meter"><span class="speed-val" id="speedDown">—</span><span class="speed-unit">Mbps download</span></div>
+                <div class="speed-meter"><span class="speed-val" id="speedUp">—</span><span class="speed-unit">Mbps upload</span></div>
+              </div>
+              <dl class="diag-list">
+                <div class="diag-row" data-k="latency"><dt>Latência</dt><dd>—</dd></div>
+                <div class="diag-row" data-k="jitter"><dt>Jitter</dt><dd>—</dd></div>
+                <div class="diag-row" data-k="quality"><dt>Qualidade</dt><dd>—</dd></div>
+                <div class="diag-row" data-k="datause"><dt>Dados usados</dt><dd>—</dd></div>
+              </dl>
+              <button class="btn-speed-only" id="btnSpeedOnly" type="button">Testar só a velocidade (usa de 5 a 40 MB)</button>
+            </article>
+          </div>
+
+          <!-- Recomendações geradas a partir dos achados -->
+          <div class="diag-findings" id="diagFindings" hidden>
+            <h3>Achados &amp; recomendações</h3>
+            <ul class="diag-findings-list" id="diagFindingsList"></ul>
+          </div>
+
+          <!-- Termos aceitos ao clicar nos botões do diagnóstico -->
+          <details class="diag-terms" id="termos-diagnostico">
+            <summary>Termos de uso e política de segurança da informação do diagnóstico</summary>
+            <div class="diag-terms-body">
+              <p><strong>Aceite.</strong> Ao clicar em "Iniciar Diagnóstico Completo" ou em "Testar só a velocidade", você declara que leu e aceita estes termos e assume a responsabilidade pelo uso da ferramenta.</p>
+              <p><strong>Finalidade.</strong> O diagnóstico avalia somente a conexão e o dispositivo de quem o executa, para fins informativos de segurança da informação. Ele não analisa domínios, servidores ou redes de terceiros.</p>
+              <p><strong>Uso permitido.</strong> Execute o diagnóstico apenas na sua própria conexão e no seu próprio dispositivo, ou em equipamentos que você tem autorização para avaliar. Qualquer uso indevido é de responsabilidade exclusiva do usuário.</p>
+              <p><strong>Dados pessoais (LGPD).</strong> A medição acontece no seu navegador, que se conecta a serviços públicos (Cloudflare, ipify, GeoJS e ip-api); eles recebem o seu IP como em qualquer acesso à internet. Ao concluir, a TECHDIM registra o resultado em ambiente privado: IP público, provedor, localização aproximada, servidor DNS, criptografia, situação do WebRTC, ID de fingerprint, velocidade e a data do aceite. O IP privado da sua rede local não é registrado. Finalidades: segurança da informação, prevenção de abuso e retorno comercial, com base no seu consentimento (Lei 13.709/2018, art. 7º, I).</p>
+              <p><strong>Retenção e direitos.</strong> Os registros ficam guardados por até 12 meses. Você pode pedir acesso, correção ou exclusão pelo e-mail techdimbrasil@gmail.com. Mais detalhes na <a href="privacidade.html">Política de Privacidade</a>.</p>
+              <p><strong>Limitação.</strong> Os resultados são indicativos, variam conforme o navegador e a rede e não substituem uma auditoria profissional.</p>
+              <p><strong>Consumo de dados.</strong> O teste de velocidade usa de 5 a 40 MB, conforme a velocidade da conexão.</p>
+              <p><strong>Controlador.</strong> TECHDIM INOVA SIMPLES (I.S.) - ME · CNPJ 61.933.926/0001-24 · techdimbrasil@gmail.com</p>
             </div>
+          </details>
         </div>
-    </footer>
+      </div>
+    </section>
 
+    <!-- ==========================================================================
+         Specialized B2B Services Catalog
+         ========================================================================== -->
+    <section class="services-section" id="solucoes">
+      <div class="container">
+        <div class="section-head">
+          <span class="badge-tag">VETORES DE ATUAÇÃO TÁTICA</span>
+          <h2>CATÁLOGO DE ENGENHARIA <span class="gradient-text-cyber">& CIBERSEGURANÇA</span></h2>
+          <p>
+            A <strong>TECHDIM INOVA SIMPLES (I.S.) - ME</strong> atua em seis frentes de engenharia de elite para blindar operações contra interrupções, ataques cibernéticos e perdas de dados.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Service 1: CyberOps -->
+          <article class="service-card">
+            <div class="service-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+            </div>
+            <h3 class="service-title">CyberOps & Resposta a Incidentes</h3>
+            <p class="service-body">
+              Contenção imediata de vazamentos de dados sob LGPD, neutralização de ransomware em andamento, auditoria forense digital e defesa em profundidade.
+            </p>
+            <div class="service-tags">
+              <span class="tag-badge">Anti-Ransomware</span>
+              <span class="tag-badge">Perícia Forense</span>
+              <span class="tag-badge">SLA 15 Minutos</span>
+            </div>
+            <div class="service-foot">
+              <button class="btn-open-service" data-service="cyberops">
+                <span>Ver Especificação Técnica →</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Service 2: Google Cloud -->
+          <article class="service-card">
+            <div class="service-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+            </div>
+            <h3 class="service-title">Google Cloud & Serverless</h3>
+            <p class="service-body">
+              Arquitetura de microsserviços em Cloud Run e GKE, automação via Terraform (IaC) e redução comprovada de custos computacionais em até 40%.
+            </p>
+            <div class="service-tags">
+              <span class="tag-badge">GCP Cloud Run</span>
+              <span class="tag-badge">Zero-Cost Standby</span>
+              <span class="tag-badge">Terraform IaC</span>
+            </div>
+            <div class="service-foot">
+              <button class="btn-open-service" data-service="cloudgcp">
+                <span>Ver Especificação Técnica →</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Service 3: Linux Hardening -->
+          <article class="service-card">
+            <div class="service-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3 class="service-title">Debian 13 Kernel Hardening</h3>
+            <p class="service-body">
+              Blindagem de baixo nível em Linux. Ajustes rigorosos de sysctl, isolamento estrito de processos com AppArmor, supressão de telemetrias e IAM.
+            </p>
+            <div class="service-tags">
+              <span class="tag-badge">Linux Debian 13</span>
+              <span class="tag-badge">sysctl Hardening</span>
+              <span class="tag-badge">AppArmor</span>
+            </div>
+            <div class="service-foot">
+              <button class="btn-open-service" data-service="hardening">
+                <span>Ver Especificação Técnica →</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Service 4: IA Local -->
+          <article class="service-card">
+            <div class="service-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><circle cx="9" cy="9" r="2"/><circle cx="15" cy="15" r="2"/><path d="M9 15l6-6"/></svg>
+            </div>
+            <h3 class="service-title">IA Local & LLMs On-Premise</h3>
+            <p class="service-body">
+              Implantação de modelos de linguagem (LLaMA 3, DeepSeek, Mistral) operando 100% desconectados da internet (Air-Gapped) para análise confidencial sem vazamentos.
+            </p>
+            <div class="service-tags">
+              <span class="tag-badge">Modelos 100% Offline</span>
+              <span class="tag-badge">Air-Gapped</span>
+              <span class="tag-badge">RAG Confidencial</span>
+            </div>
+            <div class="service-foot">
+              <button class="btn-open-service" data-service="ialocal">
+                <span>Ver Especificação Técnica →</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Service 5: Engenharia de Dados -->
+          <article class="service-card">
+            <div class="service-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            </div>
+            <h3 class="service-title">Engenharia de Dados Resiliente</h3>
+            <p class="service-body">
+              Pipelines de ingestão e processamento de dados analíticos em BigQuery e Firestore. Data lakes imutáveis com conformidade e criptografia ponta a ponta.
+            </p>
+            <div class="service-tags">
+              <span class="tag-badge">BigQuery</span>
+              <span class="tag-badge">Data Lake Imutável</span>
+              <span class="tag-badge">LGPD Compliant</span>
+            </div>
+            <div class="service-foot">
+              <button class="btn-open-service" data-service="dados">
+                <span>Ver Especificação Técnica →</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Service 6: Suporte Emergencial 24/7 -->
+          <article class="service-card">
+            <div class="service-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <h3 class="service-title">Plantão Tático Emergencial 24/7</h3>
+            <p class="service-body">
+              Pronto-socorro técnico imediato para paradas críticas de servidores, ataques DDoS, falhas em banco de dados ou recuperação de desastres (Disaster Recovery).
+            </p>
+            <div class="service-tags">
+              <span class="tag-badge">Plantão 24/7</span>
+              <span class="tag-badge">Atendimento em 15 min</span>
+              <span class="tag-badge">Disaster Recovery</span>
+            </div>
+            <div class="service-foot">
+              <button class="btn-open-service" data-service="suporte">
+                <span>Ver Especificação Técnica →</span>
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Portfólio Open-Core & Produtos de Referência (Techdim Google IA)
+         ========================================================================== -->
+    <section class="portfolio-section" id="produtos" aria-labelledby="portfolio-heading">
+      <div class="container">
+        <div class="section-head text-center">
+          <span class="badge-tag">PADRÃO OPEN-CORE // GOOGLE IA</span>
+          <h2 id="portfolio-heading">PRODUTOS & ENGENHARIA SOBERANA // <span class="gradient-text-cyber">VITRINE TÉCNICA</span></h2>
+          <p>
+            Soluções corporativas de alta disponibilidade desenvolvidas sob a Doutrina Kether_1. Arquitetura atômica em 7 diretórios canônicos, 
+            verificação criptográfica SHA-256 e integração profunda entre Google Antigravity, Gemini API, Apache Spark e Techdim Guardião.
+          </p>
+        </div>
+
+        <div class="portfolio-grid">
+          <!-- Produto 01 -->
+          <article class="portfolio-card">
+            <div class="portfolio-img-wrapper">
+              <img src="assets/portfolio/01_techdim_debian_hardening_framework.webp" width="800" height="446" alt="Techdim Debian Hardening Framework" class="portfolio-img" loading="lazy" />
+              <span class="portfolio-category-badge">IaC & Blue Team</span>
+            </div>
+            <div class="portfolio-body">
+              <h3 class="portfolio-title">Techdim Debian Hardening Framework</h3>
+              <p class="portfolio-desc">
+                Playbooks automatizados em Ansible e Bash para hardening determinístico de servidores Debian 13. Baseline CIS Benchmark Level 2, firewall nftables e isolamento AppArmor.
+              </p>
+              <div class="portfolio-tags">
+                <span class="portfolio-tag">Ansible</span>
+                <span class="portfolio-tag">Debian 13</span>
+                <span class="portfolio-tag">nftables</span>
+                <span class="portfolio-tag">CIS Level 2</span>
+              </div>
+              <div class="portfolio-action">
+                <a href="https://github.com/Techdimbr/techdim-debian-hardening-framework" target="_blank" rel="noopener noreferrer" class="btn-github-view">
+                  <span>Acessar no GitHub ↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Produto 02 -->
+          <article class="portfolio-card">
+            <div class="portfolio-img-wrapper">
+              <img src="assets/portfolio/02_gcp_sovereign_landing_zone.webp" width="800" height="446" alt="GCP Sovereign Landing Zone" class="portfolio-img" loading="lazy" />
+              <span class="portfolio-category-badge">Nuvem Soberana GCP</span>
+            </div>
+            <div class="portfolio-body">
+              <h3 class="portfolio-title">GCP Sovereign Landing Zone</h3>
+              <p class="portfolio-desc">
+                Módulo Terraform corporativo para perímetro blindado com Zero Public IPs no Google Cloud. Acesso administrativo via túnel seguro IAP e criptografia CMEK Cloud KMS.
+              </p>
+              <div class="portfolio-tags">
+                <span class="portfolio-tag">Terraform</span>
+                <span class="portfolio-tag">Zero Public IPs</span>
+                <span class="portfolio-tag">Cloud KMS</span>
+                <span class="portfolio-tag">IAP Tunnel</span>
+              </div>
+              <div class="portfolio-action">
+                <a href="https://github.com/Techdimbr/gcp-sovereign-landing-zone" target="_blank" rel="noopener noreferrer" class="btn-github-view">
+                  <span>Acessar no GitHub ↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Produto 03 -->
+          <article class="portfolio-card">
+            <div class="portfolio-img-wrapper">
+              <img src="assets/portfolio/03_driverscan_workspace_audit_cli.webp" width="800" height="446" alt="DriverScan Workspace Audit CLI" class="portfolio-img" loading="lazy" />
+              <span class="portfolio-category-badge">Governança Workspace</span>
+            </div>
+            <div class="portfolio-body">
+              <h3 class="portfolio-title">DriverScan Workspace Audit CLI</h3>
+              <p class="portfolio-desc">
+                Scanner ultrarrápido em Python stdlib para inventariar arquivos e permissões no Google Drive corporativo. Identificação de links públicos órfãos e matriz de risco em SQLite.
+              </p>
+              <div class="portfolio-tags">
+                <span class="portfolio-tag">Python stdlib</span>
+                <span class="portfolio-tag">Drive API v3</span>
+                <span class="portfolio-tag">SQLite3</span>
+                <span class="portfolio-tag">ISO 27001</span>
+              </div>
+              <div class="portfolio-action">
+                <a href="https://github.com/Techdimbr/driverscan-workspace-audit-cli" target="_blank" rel="noopener noreferrer" class="btn-github-view">
+                  <span>Acessar no GitHub ↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Produto 04 -->
+          <article class="portfolio-card">
+            <div class="portfolio-img-wrapper">
+              <img src="assets/portfolio/04_local_network_privacy_guard.webp" width="800" height="446" alt="Local Network Privacy Guard" class="portfolio-img" loading="lazy" />
+              <span class="portfolio-category-badge">Privacidade Operacional</span>
+            </div>
+            <div class="portfolio-body">
+              <h3 class="portfolio-title">Local Network Privacy Guard</h3>
+              <p class="portfolio-desc">
+                Guardião de privacidade para estações de trabalho corporativas em trânsito. Rotação determinística de MAC Address, DNS seguro via DoH/DoT e Kill Switch de rede contra vigilância.
+              </p>
+              <div class="portfolio-tags">
+                <span class="portfolio-tag">Python puro</span>
+                <span class="portfolio-tag">MAC Spoofing</span>
+                <span class="portfolio-tag">DNS DoH/DoT</span>
+                <span class="portfolio-tag">Kill Switch</span>
+              </div>
+              <div class="portfolio-action">
+                <a href="https://github.com/Techdimbr/local-network-privacy-guard" target="_blank" rel="noopener noreferrer" class="btn-github-view">
+                  <span>Acessar no GitHub ↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Produto 05 -->
+          <article class="portfolio-card">
+            <div class="portfolio-img-wrapper">
+              <img src="assets/portfolio/05_enterprise_sovereign_rag_gcp.webp" width="800" height="446" alt="Enterprise Sovereign RAG GCP" class="portfolio-img" loading="lazy" />
+              <span class="portfolio-category-badge">IA Soberana Corporativa</span>
+            </div>
+            <div class="portfolio-body">
+              <h3 class="portfolio-title">Enterprise Sovereign RAG GCP</h3>
+              <p class="portfolio-desc">
+                Pipeline RAG soberano para documentos confidenciais na Vertex AI. Busca vetorial ultrarrápida e respostas fundamentadas com Google Gemini sem risco de vazamento de dados.
+              </p>
+              <div class="portfolio-tags">
+                <span class="portfolio-tag">Vertex AI</span>
+                <span class="portfolio-tag">Gemini 2.5 Pro</span>
+                <span class="portfolio-tag">Vector Search</span>
+                <span class="portfolio-tag">Zero Training Leak</span>
+              </div>
+              <div class="portfolio-action">
+                <a href="https://github.com/Techdimbr/enterprise-sovereign-rag-gcp" target="_blank" rel="noopener noreferrer" class="btn-github-view">
+                  <span>Acessar no GitHub ↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Produto 06 -->
+          <article class="portfolio-card">
+            <div class="portfolio-img-wrapper">
+              <img src="assets/portfolio/06_unifi_enterprise_ops_toolkit.webp" width="800" height="446" alt="UniFi Enterprise Ops Toolkit" class="portfolio-img" loading="lazy" />
+              <span class="portfolio-category-badge">Automação de Redes</span>
+            </div>
+            <div class="portfolio-body">
+              <h3 class="portfolio-title">UniFi Enterprise Ops Toolkit</h3>
+              <p class="portfolio-desc">
+                Toolkit corporativo para ecossistemas Ubiquiti UniFi / UDM-Pro. Rotinas de backup criptografado externo, validação de isolamento de VLANs e telemetria de switches e APs.
+              </p>
+              <div class="portfolio-tags">
+                <span class="portfolio-tag">Python</span>
+                <span class="portfolio-tag">UDM-Pro</span>
+                <span class="portfolio-tag">UniFi OS API</span>
+                <span class="portfolio-tag">VLAN Audit</span>
+              </div>
+              <div class="portfolio-action">
+                <a href="https://github.com/Techdimbr/unifi-enterprise-ops-toolkit" target="_blank" rel="noopener noreferrer" class="btn-github-view">
+                  <span>Acessar no GitHub ↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Produto 07 -->
+          <article class="portfolio-card">
+            <div class="portfolio-img-wrapper">
+              <img src="assets/portfolio/07_lgpd_pii_scanner_toolkit.webp" width="800" height="446" alt="LGPD PII Scanner Toolkit" class="portfolio-img" loading="lazy" />
+              <span class="portfolio-category-badge">Conformidade Regulatória</span>
+            </div>
+            <div class="portfolio-body">
+              <h3 class="portfolio-title">LGPD PII Scanner Toolkit</h3>
+              <p class="portfolio-desc">
+                Scanner determinístico de dados pessoais sensíveis (CPF, cartões, e-mails). Validação matemática Módulo 11 da Receita Federal e geração automatizada de relatórios RIPD.
+              </p>
+              <div class="portfolio-tags">
+                <span class="portfolio-tag">LGPD Lei 13.709</span>
+                <span class="portfolio-tag">CPF Mod 11</span>
+                <span class="portfolio-tag">Algoritmo Luhn</span>
+                <span class="portfolio-tag">RIPD ANPD</span>
+              </div>
+              <div class="portfolio-action">
+                <a href="https://github.com/Techdimbr/lgpd-pii-scanner-toolkit" target="_blank" rel="noopener noreferrer" class="btn-github-view">
+                  <span>Acessar no GitHub ↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Produto 08 -->
+          <article class="portfolio-card">
+            <div class="portfolio-img-wrapper">
+              <img src="assets/portfolio/08_linux_ir_triage_collector.webp" width="800" height="446" alt="Linux Incident Response Triage Collector" class="portfolio-img" loading="lazy" />
+              <span class="portfolio-category-badge">Forense Blue Team</span>
+            </div>
+            <div class="portfolio-body">
+              <h3 class="portfolio-title">Linux IR Triage Collector</h3>
+              <p class="portfolio-desc">
+                Coletor forense live-response em Bash nativo conforme a norma ISO/IEC 27037 e RFC 3227. Preservação de memória volátil e geração de manifesto criptográfico SHA-256 de custódia.
+              </p>
+              <div class="portfolio-tags">
+                <span class="portfolio-tag">ISO/IEC 27037</span>
+                <span class="portfolio-tag">RFC 3227</span>
+                <span class="portfolio-tag">Bash POSIX</span>
+                <span class="portfolio-tag">Cadeia de Custódia</span>
+              </div>
+              <div class="portfolio-action">
+                <a href="https://github.com/Techdimbr/linux-ir-triage-collector" target="_blank" rel="noopener noreferrer" class="btn-github-view">
+                  <span>Acessar no GitHub ↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Produto 09 -->
+          <article class="portfolio-card">
+            <div class="portfolio-img-wrapper">
+              <img src="assets/portfolio/09_active_directory_linux_integrator.webp" width="800" height="446" alt="Active Directory Linux Integrator" class="portfolio-img" loading="lazy" />
+              <span class="portfolio-category-badge">Identidade Híbrida</span>
+            </div>
+            <div class="portfolio-body">
+              <h3 class="portfolio-title">Active Directory Linux Integrator</h3>
+              <p class="portfolio-desc">
+                Ingresso seguro e governança de estações e servidores Linux Debian/Ubuntu em domínios Microsoft Active Directory. Autenticação Kerberos, SSSD, SSO e regras de sudoers centralizadas.
+              </p>
+              <div class="portfolio-tags">
+                <span class="portfolio-tag">Ansible</span>
+                <span class="portfolio-tag">Active Directory</span>
+                <span class="portfolio-tag">SSSD</span>
+                <span class="portfolio-tag">Kerberos SSO</span>
+              </div>
+              <div class="portfolio-action">
+                <a href="https://github.com/Techdimbr/active-directory-linux-integrator" target="_blank" rel="noopener noreferrer" class="btn-github-view">
+                  <span>Acessar no GitHub ↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Produto 10 -->
+          <article class="portfolio-card">
+            <div class="portfolio-img-wrapper">
+              <img src="assets/portfolio/10_techdim_architecture_decision_records.webp" width="800" height="446" alt="Techdim Architecture Decision Records" class="portfolio-img" loading="lazy" />
+              <span class="portfolio-category-badge">Governança Técnica</span>
+            </div>
+            <div class="portfolio-body">
+              <h3 class="portfolio-title">Techdim Architecture Decision Records</h3>
+              <p class="portfolio-desc">
+                Repositório oficial de Registros de Decisão de Arquitetura no padrão Michael Nygard com diagramas Mermaid. Histórico imutável de decisões de engenharia, ciberdefesa e trade-offs.
+              </p>
+              <div class="portfolio-tags">
+                <span class="portfolio-tag">ADR Nygard</span>
+                <span class="portfolio-tag">Mermaid.js</span>
+                <span class="portfolio-tag">Governança</span>
+                <span class="portfolio-tag">ISO 27001</span>
+              </div>
+              <div class="portfolio-action">
+                <a href="https://github.com/Techdimbr/techdim-architecture-decision-records" target="_blank" rel="noopener noreferrer" class="btn-github-view">
+                  <span>Acessar no GitHub ↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Banner de Captação para Investidores e Clientes Corporativos -->
+        <div class="investor-cta-box">
+          <h3 class="investor-cta-title">OPORTUNIDADE CORPORATIVA & TESE DE INVESTIMENTO</h3>
+          <p class="investor-cta-desc">
+            A <strong>TECHDIM GOOGLE IA</strong> une a vanguarda dos modelos fundacionais do Google Gemini ao ecossistema multiagentes do Google Antigravity e Apache Spark, 
+            blindados pela sentinela proprietária Techdim Guardião. Desenvolvemos soluções com barreira de entrada técnica insuperável, conformidade militar e segurança jurídica irrestrita.
+          </p>
+          <div class="investor-cta-actions">
+            <a href="https://wa.me/5519996153276?text=Ol%C3%A1%2C%20gostaria%20de%20conversar%20sobre%20oportunidades%20de%20investimento%20e%20parceria%20corporativa%20na%20TECHDIM!" 
+               target="_blank" rel="noopener noreferrer" class="btn-primary-cyber">
+              <span>Agendar Reunião Executiva ↗</span>
+            </a>
+            <a href="https://github.com/Techdimbr" target="_blank" rel="noopener noreferrer" class="btn-secondary-cyber">
+              <span>Explorar GitHub da Organização ↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Multiagent AI Engine & Parallel Orchestration
+         ========================================================================== -->
+    <section class="multiagent-section" id="multiagentes">
+      <div class="container">
+        <div class="section-head">
+          <span class="badge-tag">CONCORRÊNCIA EM TEMPO REAL</span>
+          <h2>SISTEMA MULTIAGENTES DE IA // <span class="gradient-text-cyber">TECHDIM PARALLEL ENGINE</span></h2>
+          <p>
+            Quatro agentes autônomos de IA especializados operando simultaneamente em paralelo para auditar infraestrutura, caçar credenciais expostas, testar pipelines e garantir conformidade contínua.
+          </p>
+        </div>
+
+        <div class="multiagent-grid">
+          <!-- Agent 1 -->
+          <div class="agent-box">
+            <div class="agent-header">
+              <div class="agent-icon-badge">🛡️</div>
+              <span class="agent-status-tag">PASSED (0.086s)</span>
+            </div>
+            <h3>Sentinela de Segurança</h3>
+            <p>Varre repositórios e servidores em busca de credenciais vazadas (ghp_, OpenAI, chaves privadas RSA) e audita permissões de execução.</p>
+            <div class="agent-metric-bar">
+              <span>SECRETS SCAN: 0 DETECTADOS</span>
+              <span>100% BLINDADO</span>
+            </div>
+          </div>
+
+          <!-- Agent 2 -->
+          <div class="agent-box">
+            <div class="agent-header">
+              <div class="agent-icon-badge">🧪</div>
+              <span class="agent-status-tag">PASSED (0.086s)</span>
+            </div>
+            <h3>QA GitHub Actions</h3>
+            <p>Valida a integridade sintática de pipelines CI/CD, scripts bash (bash -n) e especificações JSON para implantações seguras sem quebras.</p>
+            <div class="agent-metric-bar">
+              <span>SINTAXE: 100% VÁLIDA</span>
+              <span>CI/CD SEGURO</span>
+            </div>
+          </div>
+
+          <!-- Agent 3 -->
+          <div class="agent-box">
+            <div class="agent-header">
+              <div class="agent-icon-badge">🗄️</div>
+              <span class="agent-status-tag">PASSED (0.087s)</span>
+            </div>
+            <h3>Curador de Catálogo</h3>
+            <p>Indexa e sincroniza volumes, arquivos e metadados com o banco geral SQLite, garantindo governança e rastreabilidade total de dados.</p>
+            <div class="agent-metric-bar">
+              <span>SQLITE: CONECTADO</span>
+              <span>GOVERNANÇA</span>
+            </div>
+          </div>
+
+          <!-- Agent 4 -->
+          <div class="agent-box">
+            <div class="agent-header">
+              <div class="agent-icon-badge">💻</div>
+              <span class="agent-status-tag">PASSED (0.083s)</span>
+            </div>
+            <h3>Desenvolvedor Core</h3>
+            <p>Audita arquitetura de software, modularização, resiliência estrutural e conformidade com boas práticas DevSecOps corporativas.</p>
+            <div class="agent-metric-bar">
+              <span>ARQUITETURA: LIMPA</span>
+              <span>RESILIÊNCIA</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 2.8rem;">
+          <a href="https://wa.me/5519996153276?text=Ol%C3%A1%2C%20gostaria%20de%20implementar%20a%20arquitetura%20de%20Agentes%20IA%20Paralelos%20na%20minha%20empresa!" 
+             class="btn-cta-whatsapp" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.974.545 1.785.835 2.791.835 3.181 0 5.767-2.586 5.768-5.766 0-3.18-2.586-5.768-5.768-5.768zm7.391 5.766c-.001 4.077-3.314 7.39-7.391 7.39-1.282 0-2.484-.336-3.535-.921l-4.524 1.187 1.21-4.407c-.675-1.109-1.066-2.408-1.066-3.799.001-4.077 3.314-7.39 7.391-7.39 4.077 0 7.39 3.313 7.39 7.39z"/></svg>
+            <span>Contratar Orquestração Multiagentes para Minha Operação</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Downtime Loss & ROI Calculator
+         ========================================================================== -->
+    <section class="roi-section" id="roi">
+      <div class="container">
+        <div class="section-head">
+          <span class="badge-tag">SIMULADOR FINANCEIRO DE RISCO</span>
+          <h2>CALCULADORA DE PREVENÇÃO <span class="gradient-text-cyber">DE DOWNTIME</span></h2>
+          <p>
+            Descubra o custo real da instabilidade em sua operação. Sistemas fora do ar não custam apenas vendas diretas: custam horas paradas de equipe e danos severos à reputação da marca.
+          </p>
+        </div>
+
+        <div class="roi-card">
+          <div class="roi-grid">
+            <div>
+              <div class="slider-group">
+                <div class="slider-label-row">
+                  <span id="roiRevenueLabel">Faturamento Mensal Estimado:</span>
+                  <span class="slider-value-badge" id="roiRevenueBadge">R$ 200.000</span>
+                </div>
+                <input type="range" class="cyber-range" id="roiRevenueSlider" aria-labelledby="roiRevenueLabel" min="30000" max="2000000" step="10000" value="200000" />
+              </div>
+
+              <div class="slider-group">
+                <div class="slider-label-row">
+                  <span id="roiDowntimeLabel">Horas de Instabilidade ou Lentidão / Mês:</span>
+                  <span class="slider-value-badge" id="roiDowntimeBadge">4h / mês</span>
+                </div>
+                <input type="range" class="cyber-range" id="roiDowntimeSlider" aria-labelledby="roiDowntimeLabel" min="1" max="24" step="1" value="4" />
+              </div>
+
+              <p class="text-dark" style="font-size: 0.82rem; line-height: 1.5;">
+                * O modelo estatístico pondera perda de faturamento direto, custo da ociosidade da equipe produtiva e custo de reaquisição de clientes afetados (fator de entropia 2.8x).
+              </p>
+            </div>
+
+            <div class="roi-outcome-card">
+              <span class="outcome-pill">PREJUÍZO FINANCEIRO PROJETADO</span>
+              <div class="outcome-loss-val text-cyan" id="roiLossResult">R$ 3.111</div>
+              <p class="outcome-desc">
+                Em perdas operacionais acumuladas ao mês que poderiam ser 100% mitigadas com a blindagem de infraestrutura e alta disponibilidade da TECHDIM.
+              </p>
+              <a href="#" class="btn-prevent-loss" id="btnRoiWhatsapp" target="_blank" rel="noopener noreferrer">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.974.545 1.785.835 2.791.835 3.181 0 5.767-2.586 5.768-5.766 0-3.18-2.586-5.768-5.768-5.768zm7.391 5.766c-.001 4.077-3.314 7.39-7.391 7.39-1.282 0-2.484-.336-3.535-.921l-4.524 1.187 1.21-4.407c-.675-1.109-1.066-2.408-1.066-3.799.001-4.077 3.314-7.39 7.391-7.39 4.077 0 7.39 3.313 7.39 7.39z"/></svg>
+                <span>Blindar Minha Operação Agora</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         About & Institutional Leadership
+         ========================================================================== -->
+    <section class="about-section" id="sobre">
+      <div class="container">
+        <div class="about-card-box">
+          <div class="about-layout">
+            <!-- Bio & Company Profile -->
+            <div class="about-bio">
+              <span class="badge-tag">AUTORIDADE & CREDIBILIDADE</span>
+              <h3>TRANSMUTANDO ENTROPIA <span class="gradient-text-cyber">EM ORDEM TÉCNICA</span></h3>
+              <p>
+                A <strong>TECHDIM INOVA SIMPLES (I.S.) - ME</strong> (CNPJ: <code>61.933.926/0001-24</code>) é uma empresa de engenharia de software e consultoria tática de cibersegurança sediada em Campinas, São Paulo, com capacidade operacional e clientes em todo o território nacional.
+              </p>
+              <p>
+                Fundada sob a premissa da <em>Soberania Computacional</em> e do <em>Hardening Matemático</em>, entregamos ecossistemas corporativos blindados, sem intermediários, conectando os decisores das empresas diretamente ao arquiteto sênior responsável.
+              </p>
+
+              <div class="founder-credential-card">
+                <div class="founder-avatar-box">K1</div>
+                <div class="founder-details">
+                  <h4>Eng. Deivis Irio Mayer (Kether1)</h4>
+                  <span class="role">Liderança Técnica & Arquiteto Principal de Sistemas</span>
+                  <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.35rem;">
+                    Especialista em segurança defensiva, isolamento de kernels Linux, arquitetura serverless em GCP e orquestração de IA on-premise.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Certifications Block -->
+            <div class="certifications-block">
+              <div class="cert-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                <div>
+                  <div class="cert-name">IT Governance & LGPD Foundation</div>
+                  <div class="cert-auth">ITCERTS Toronto — Governança e Privacidade de Dados</div>
+                </div>
+              </div>
+
+              <div class="cert-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <div>
+                  <div class="cert-name">ISO/IEC 27001 Foundation Accredited</div>
+                  <div class="cert-auth">Padrão Internacional de Gestão de Segurança da Informação</div>
+                </div>
+              </div>
+
+              <div class="cert-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+                <div>
+                  <div class="cert-name">Google Cloud Partner Registered</div>
+                  <div class="cert-auth">Ecossistema Credenciado para Arquiteturas GCP Serverless</div>
+                </div>
+              </div>
+
+              <!-- DCISE Intelligence Transmission -->
+              <div class="dcise-banner">
+                <div class="dcise-header">
+                  <span class="dcise-tag">TRANSMISSÃO TÁTICA // DCISE KETHER_1</span>
+                  <span class="live-pulse-dot"></span>
+                </div>
+                <p class="dcise-content font-mono" style="font-size: 0.82rem;">
+                  "A estabilidade de um sistema não decorre da ausência de ameaças, mas da robustez intrínseca de suas fronteiras. A blindagem preventiva é 10x mais barata do que remediar um único incidente de indisponibilidade."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FAQ Section
+         ========================================================================== -->
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <span class="badge-tag">ESCLARECIMENTOS COMERCIAIS</span>
+          <h2>PERGUNTAS <span class="gradient-text-cyber">FREQUENTES (FAQ)</span></h2>
+          <p>
+            Entenda como funciona a contratação dos serviços da TECHDIM, prazos de execução, acordos de confidencialidade e cobertura geográfica.
+          </p>
+        </div>
+
+        <div class="faq-wrapper">
+          <!-- FAQ 1 -->
+          <div class="faq-card open">
+            <button class="faq-btn">
+              <span>Como funciona o primeiro diagnóstico técnico da TECHDIM?</span>
+              <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-panel">
+              <p>O atendimento inicial é realizado diretamente pelo Eng. Deivis Irio Mayer via WhatsApp ou videoconferência. Realizamos uma varredura preliminar da arquitetura, mapeamos os principais vetores de vulnerabilidade ou custos excessivos e entregamos um parecer com o plano de ação recomendado sem qualquer compromisso.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-card">
+            <button class="faq-btn">
+              <span>A TECHDIM atende clientes fora do estado de São Paulo?</span>
+              <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-panel">
+              <p>Sim! Atendemos empresas em todo o Brasil e no exterior. Nossos processos de infraestrutura como código (Terraform), auditorias remotas e gestão Cloud GCP permitem atuação remota de altíssima segurança com zero perda de eficiência.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-card">
+            <button class="faq-btn">
+              <span>Como é garantido o sigilo e a privacidade dos dados corporativos?</span>
+              <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-panel">
+              <p>Todas as interações técnicas são protegidas por Acordo de Confidencialidade (NDA) mútuo com firma jurídica antes do início de qualquer diagnóstico invasivo. Além disso, somos credenciados em conformidade LGPD e ISO/IEC 27001.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-card">
+            <button class="faq-btn">
+              <span>Em quanto tempo é possível iniciar a blindagem ou suporte?</span>
+              <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-panel">
+              <p>Para chamados de emergência (parada de servidores ou incidentes de segurança), o acionamento tático é imediato com SLA de resposta em até 15 minutos pelo Plantão 24/7. Para projetos planejados de arquitetura ou hardening, o início ocorre em até 48 horas após alinhamento do escopo.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-card">
+            <button class="faq-btn">
+              <span>Qual a forma de contratação (Sprint, Projeto ou Sustentação)?</span>
+              <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-panel">
+              <p>Oferecemos modelos flexíveis: contratação pontual por projeto (com escopo fechado e garantia de entrega) ou contratos mensais de sustentação e monitoramento contínuo com plantão tático prioritário.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-card">
+            <button class="faq-btn">
+              <span>Quais são os 10 projetos públicos de código aberto (Open-Core) da TECHDIM?</span>
+              <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-panel">
+              <p>A TECHDIM disponibiliza uma suíte open-core auditável no GitHub com 10 ferramentas corporativas: Debian Hardening Framework, GCP Landing Zone Terraform, DriverScan Hardware Audit, Linux Privacy Guard, Sovereign RAG Engine, UniFi Controller Toolkit, Enterprise LGPD Scanner, Linux IR Triage Collector, AD Linux Integrator e Architecture Decision Records (ADRs). Todos os códigos podem ser auditados publicamente em <a href="https://github.com/Techdimbr" target="_blank" rel="noopener noreferrer" style="color:var(--accent-cyan); text-decoration:underline;">github.com/Techdimbr</a>.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 7 -->
+          <div class="faq-card">
+            <button class="faq-btn">
+              <span>Como a TECHDIM atua na adequação à LGPD (Lei 13.709/2018) e normas ISO/IEC 27001?</span>
+              <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-panel">
+              <p>Nossa abordagem une governança e engenharia técnica: realizamos varredura automatizada de dados pessoais sensíveis (PII em bancos e arquivos), mapeamento de fluxo de dados, políticas de criptografia ponta a ponta (TLS 1.3), controles de acesso Zero Trust e emissão do Relatório de Impacto à Proteção de Dados (RIPD), blindando sua empresa contra incidentes e penalidades da ANPD.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- blog-recentes:inicio -->
+    <section class="blog-home" id="blog" aria-labelledby="blog-titulo">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="blog-titulo">BLOG <span class="gradient-text-cyber">TECHDIM</span></h2>
+          <p>Todo dia, notícia de tecnologia, alerta de segurança e dica prática para empresas, sempre com as fontes.</p>
+        </div>
+        <div class="blog-home-grid">
+          <a class="blog-home-card" href="blog/2026-11-06/vulnerabilidade-no-paint-falha-grave-permite-ataques-remotos/">
+            <span class="blog-rotulo blog-noticias">Notícia de tecnologia</span>
+            <h3>Vulnerabilidade no Paint: Falha grave permite ataques remotos no Windows 11</h3>
+            <p>A vulnerabilidade CVE-2026-83844 no Microsoft Paint do Windows 11 permite a execução remota de código malicioso, com…</p>
+          </a>
+          <a class="blog-home-card" href="blog/2026-11-06/openssh-falha-sshole-permite-acesso-root-e-e-explorada/">
+            <span class="blog-rotulo blog-hacker">Alerta de segurança</span>
+            <h3>OpenSSH: Falha &#x27;SSHOLE&#x27; permite acesso root e é explorada ativamente</h3>
+            <p>A falha CVE-2026-123158 (SSHOLE) no OpenSSH permite login sem senha em contas com asterisco (*) no hash. Afeta Linux…</p>
+          </a>
+          <a class="blog-home-card" href="blog/2026-11-06/downtime-o-custo-oculto-da-parada-de-sistema-na-sua-pme/">
+            <span class="blog-rotulo blog-dica">Dica prática</span>
+            <h3>Downtime: O Custo Oculto da Parada de Sistema na Sua PME</h3>
+            <p>Cada hora de sistema parado na PME pode custar milhares de reais em perdas de receita, produtividade e danos à…</p>
+          </a>
+          <a class="blog-home-card" href="blog/2026-11-05/vazamento-de-dados-fgc-notifica-investidores-apos-incidente/">
+            <span class="blog-rotulo blog-noticias">Notícia de tecnologia</span>
+            <h3>Vazamento de Dados: FGC notifica investidores após incidente com informações sensíveis</h3>
+            <p>O Fundo Garantidor de Créditos (FGC) detectou acesso não autorizado a informações pessoais e dados de pagamento de…</p>
+          </a>
+          <a class="blog-home-card" href="blog/2026-11-05/cwpdoor-servidores-linux-sendo-backdoored-via-cwp-web-server/">
+            <span class="blog-rotulo blog-hacker">Alerta de segurança</span>
+            <h3>CWPdoor: Servidores Linux sendo backdoored via CWP web server trojanizado</h3>
+            <p>Uma nova ameaça, o malware CWPdoor, está sendo distribuída através de uma versão trojanizada do cwpsrv, o servidor web…</p>
+          </a>
+          <a class="blog-home-card" href="blog/2026-11-05/sinais-de-vulnerabilidade-3-alertas-que-sua-rede-pode-estar/">
+            <span class="blog-rotulo blog-dica">Dica prática</span>
+            <h3>Sinais de Vulnerabilidade: 3 alertas que sua rede pode estar emitindo agora</h3>
+            <p>Identificar sinais precoces de vulnerabilidade é crucial para PMEs, pois permite agir antes que incidentes de…</p>
+          </a>
+        </div>
+        <p class="blog-home-mais"><a href="blog/">Ver todos os posts →</a> · <a href="blog/feed.xml">Assinar o feed RSS</a></p>
+      </div>
+    </section>
+    <!-- blog-recentes:fim -->
+
+    <!-- ==========================================================================
+         Contact & Conversion Section
+         ========================================================================== -->
+    <section class="contact-section" id="contato">
+      <div class="container">
+        <div class="contact-box">
+          <div class="contact-grid">
+            <!-- Direct Channels Column -->
+            <div>
+              <span class="badge-tag">ATENDIMENTO IMEDIATO B2B</span>
+              <h2 class="font-display" style="font-size: 2.2rem; margin: 0.8rem 0 1rem;">
+                FALE COM O <span class="gradient-text-cyber">CORPO TÉCNICO</span>
+              </h2>
+              <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.65;">
+                Inicie agora o diálogo diretamente com o Eng. Deivis Irio Mayer para blindar sua operação, migrar servidores ou contratar o Plantão Tático de Cibersegurança.
+              </p>
+
+              <div class="direct-channels-list">
+                <!-- WhatsApp Official -->
+                <a href="https://wa.me/5519996153276?text=Ol%C3%A1%2C%20gostaria%20de%20um%20diagn%C3%B3stico%20t%C3%A9cnico%20da%20TECHDIM!" 
+                   class="channel-card-link wa-accent" target="_blank" rel="noopener noreferrer">
+                  <div class="channel-icon-circ">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.974.545 1.785.835 2.791.835 3.181 0 5.767-2.586 5.768-5.766 0-3.18-2.586-5.768-5.768-5.768zm7.391 5.766c-.001 4.077-3.314 7.39-7.391 7.39-1.282 0-2.484-.336-3.535-.921l-4.524 1.187 1.21-4.407c-.675-1.109-1.066-2.408-1.066-3.799.001-4.077 3.314-7.39 7.391-7.39 4.077 0 7.39 3.313 7.39 7.39z"/></svg>
+                  </div>
+                  <div class="channel-data">
+                    <span class="channel-sub">WhatsApp & Plantão Comercial</span>
+                    <span class="channel-main">(19) 99615-3276</span>
+                  </div>
+                </a>
+
+                <!-- Phone Direct Call -->
+                <a href="tel:+5519996153276" class="channel-card-link">
+                  <div class="channel-icon-circ">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  </div>
+                  <div class="channel-data">
+                    <span class="channel-sub">Discagem Direta</span>
+                    <span class="channel-main">+55 19 99615-3276</span>
+                  </div>
+                </a>
+
+                <!-- Email Institutional -->
+                <div class="channel-card-link" style="cursor: pointer;" data-copy="techdimbrasil@gmail.com" title="Clique para copiar e-mail">
+                  <div class="channel-icon-circ">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  </div>
+                  <div class="channel-data">
+                    <span class="channel-sub">E-mail Institucional (Clique p/ copiar)</span>
+                    <span class="channel-main" style="font-size: 0.95rem;">techdimbrasil@gmail.com</span>
+                  </div>
+                </div>
+
+                <!-- Location -->
+                <div class="channel-card-link">
+                  <div class="channel-icon-circ">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  </div>
+                  <div class="channel-data">
+                    <span class="channel-sub">Sede Operacional</span>
+                    <span class="channel-main">Campinas — SP, Brasil</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tactical Contact Form -->
+            <div>
+              <form class="tactical-form" id="tacticalContactForm">
+                <h3 class="font-display" style="font-size: 1.35rem; color: #fff;">
+                  Solicitar Diagnóstico Tático
+                </h3>
+                <p style="color: var(--text-dark); font-size: 0.85rem; margin-top: -0.5rem;">
+                  Preencha os dados abaixo para receber retorno em até 1 hora útil via WhatsApp ou e-mail.
+                </p>
+
+                <div class="field-group">
+                  <label for="formName">Seu Nome / Responsável: <span class="req" aria-hidden="true">*</span></label>
+                  <input type="text" id="formName" class="cyber-input" aria-required="true" placeholder="Ex: Rodrigo Albuquerque" required />
+                </div>
+
+                <div class="field-group">
+                  <label for="formCompany">Empresa / Razão Social: <span class="req" aria-hidden="true">*</span></label>
+                  <input type="text" id="formCompany" class="cyber-input" aria-required="true" placeholder="Ex: FinTech Soluções Ltda" required />
+                </div>
+
+                <div class="form-row-2">
+                  <div class="field-group">
+                    <label for="formPhone">WhatsApp Comercial: <span class="req" aria-hidden="true">*</span></label>
+                    <input type="tel" id="formPhone" class="cyber-input" aria-required="true" placeholder="(19) 99999-9999" required />
+                  </div>
+                  <div class="field-group">
+                    <label for="formEmail">E-mail Corporativo: <span class="req" aria-hidden="true">*</span></label>
+                    <input type="email" id="formEmail" class="cyber-input" aria-required="true" placeholder="contato@empresa.com" required />
+                  </div>
+                </div>
+
+                <div class="field-group">
+                  <label for="formService">Serviço de Maior Interesse:</label>
+                  <select id="formService" class="cyber-input">
+                    <option value="CyberOps e Resposta a Incidentes">CyberOps & Resposta a Incidentes 24/7</option>
+                    <option value="Google Cloud Architecture e Serverless">Google Cloud Architecture & Serverless</option>
+                    <option value="Debian 13 Hardening e Blindagem Linux">Debian 13 Kernel Hardening & Blindagem Linux</option>
+                    <option value="IA Local On-Premise Air-Gapped">IA Local & LLMs On-Premise Air-Gapped</option>
+                    <option value="Engenharia de Dados e BigQuery">Engenharia de Dados & Data Lakes</option>
+                    <option value="Plantão Tático Emergencial">Plantão Tático Emergencial 24/7</option>
+                    <option value="Diagnóstico e Auditoria Geral">Diagnóstico & Auditoria Geral de TI</option>
+                  </select>
+                </div>
+
+                <div class="field-group">
+                  <label for="formMessage">Descreva brevemente sua necessidade:</label>
+                  <textarea id="formMessage" class="cyber-input" rows="3" placeholder="Ex: Precisamos blindar nossos servidores Linux e otimizar custos de computação em nuvem."></textarea>
+                </div>
+
+                <button type="submit" class="cyber-submit-btn">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.974.545 1.785.835 2.791.835 3.181 0 5.767-2.586 5.768-5.766 0-3.18-2.586-5.768-5.768-5.768zm7.391 5.766c-.001 4.077-3.314 7.39-7.391 7.39-1.282 0-2.484-.336-3.535-.921l-4.524 1.187 1.21-4.407c-.675-1.109-1.066-2.408-1.066-3.799.001-4.077 3.314-7.39 7.391-7.39 4.077 0 7.39 3.313 7.39 7.39z"/></svg>
+                  <span>Encaminhar Proposta via WhatsApp</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       Footer
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="brand-wrapper">
+          <img src="assets/techdim-official-cube-icon.jpg" alt="Logo Oficial TECHDIM INOVA" class="brand-logo-img" width="46" height="46" loading="lazy" decoding="async" />
+          <div class="brand-meta">
+            <span class="brand-title">TECHDIM<span>_</span></span>
+            <span class="brand-subtitle">INOVA SIMPLES (I.S.) - ME</span>
+          </div>
+        </div>
+        <p>
+          Consultoria especializada em Cibersegurança Defensiva, Hardening de Kernel Linux Debian 13 e Arquitetura Serverless em Google Cloud Platform.
+        </p>
+        <p class="font-mono text-dark" style="font-size: 0.78rem; margin-top: 0.5rem;">
+          CNPJ: 61.933.926/0001-24 · Campinas — SP
+        </p>
+        <ul class="social-links" aria-label="Redes sociais da TECHDIM">
+          <li><a href="https://www.instagram.com/techdimbr/" target="_blank" rel="noopener noreferrer" aria-label="Instagram da TECHDIM" title="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/></svg>
+          </a></li>
+          <li><a href="https://www.linkedin.com/company/techdim/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn da TECHDIM" title="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a></li>
+          <li><a href="https://github.com/Techdimbr" target="_blank" rel="noopener noreferrer" aria-label="GitHub da TECHDIM" title="GitHub">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </a></li>
+        </ul>
+        <ul class="contato-seguro" aria-label="Contato criptografado">
+          <li><a href="mailto:techdimbr@proton.me" aria-label="E-mail criptografado (Proton Mail): techdimbr@proton.me" title="E-mail criptografado: techdimbr@proton.me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z"/><circle cx="16.5" cy="7.5" r=".5" fill="currentColor"/></svg></a></li>
+          <li><a href="https://signal.me/#p/+5519996153276" target="_blank" rel="noopener noreferrer" aria-label="Signal: (19) 99615-3276" title="Signal: (19) 99615-3276"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0q-.934 0-1.83.139l.17 1.111a11 11 0 0 1 3.32 0l.172-1.111A12 12 0 0 0 12 0M9.152.34A12 12 0 0 0 5.77 1.742l.584.961a10.8 10.8 0 0 1 3.066-1.27zm5.696 0-.268 1.094a10.8 10.8 0 0 1 3.066 1.27l.584-.962A12 12 0 0 0 14.848.34M12 2.25a9.75 9.75 0 0 0-8.539 14.459c.074.134.1.292.064.441l-1.013 4.338 4.338-1.013a.62.62 0 0 1 .441.064A9.7 9.7 0 0 0 12 21.75c5.385 0 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25m-7.092.068a12 12 0 0 0-2.59 2.59l.909.664a11 11 0 0 1 2.345-2.345zm14.184 0-.664.909a11 11 0 0 1 2.345 2.345l.909-.664a12 12 0 0 0-2.59-2.59M1.742 5.77A12 12 0 0 0 .34 9.152l1.094.268a10.8 10.8 0 0 1 1.269-3.066zm20.516 0-.961.584a10.8 10.8 0 0 1 1.27 3.066l1.093-.268a12 12 0 0 0-1.402-3.383M.138 10.168A12 12 0 0 0 0 12q0 .934.139 1.83l1.111-.17A11 11 0 0 1 1.125 12q0-.848.125-1.66zm23.723.002-1.111.17q.125.812.125 1.66c0 .848-.042 1.12-.125 1.66l1.111.172a12.1 12.1 0 0 0 0-3.662M1.434 14.58l-1.094.268a12 12 0 0 0 .96 2.591l-.265 1.14 1.096.255.36-1.539-.188-.365a10.8 10.8 0 0 1-.87-2.35m21.133 0a10.8 10.8 0 0 1-1.27 3.067l.962.584a12 12 0 0 0 1.402-3.383zm-1.793 3.848a11 11 0 0 1-2.345 2.345l.664.909a12 12 0 0 0 2.59-2.59zm-19.959 1.1L.357 21.48a1.8 1.8 0 0 0 2.162 2.161l1.954-.455-.256-1.095-1.953.455a.675.675 0 0 1-.81-.81l.454-1.954zm16.832 1.769a10.8 10.8 0 0 1-3.066 1.27l.268 1.093a12 12 0 0 0 3.382-1.402zm-10.94.213-1.54.36.256 1.095 1.139-.266c.814.415 1.683.74 2.591.961l.268-1.094a10.8 10.8 0 0 1-2.35-.869zm3.634 1.24-.172 1.111a12.1 12.1 0 0 0 3.662 0l-.17-1.111q-.812.125-1.66.125a11 11 0 0 1-1.66-.125"/></svg></a></li>
+          <li><a href="https://t.me/+5519996153276" target="_blank" rel="noopener noreferrer" aria-label="Telegram: (19) 99615-3276" title="Telegram: (19) 99615-3276"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Serviços Táticos</h4>
+        <ul class="footer-nav">
+          <li><a href="#solucoes">CyberOps & Incidentes</a></li>
+          <li><a href="#solucoes">Google Cloud Run & GKE</a></li>
+          <li><a href="#solucoes">Debian 13 Hardening</a></li>
+          <li><a href="#solucoes">IA Local Air-Gapped</a></li>
+          <li><a href="#solucoes">Engenharia de Dados</a></li>
+          <li><a href="#solucoes">Plantão Tático 24/7</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Recursos & Ferramentas</h4>
+        <ul class="footer-nav">
+          <li><a href="#produtos">Portfólio de projetos</a></li>
+          <li><a href="#multiagentes">Agentes de IA</a></li>
+          <li><a href="#scanner">ThreatScanner Kether_1</a></li>
+          <li><a href="#roi">Calculadora de Downtime</a></li>
+          <li><a href="#sobre">Corpo Técnico</a></li>
+          <li><a href="#faq">Perguntas Frequentes</a></li>
+          <li><a href="blog/">Blog: Radar Diário</a></li>
+          <li><a href="loja.html">Loja: equipamentos e serviços</a></li>
+          <li><a href="https://github.com/Techdimbr" target="_blank" rel="noopener noreferrer">Repositório GitHub</a></li>
+          <li><a href="https://linkedin.com/in/deivismayer" target="_blank" rel="noopener noreferrer">LinkedIn do Fundador</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Canais Oficiais</h4>
+        <ul class="footer-nav">
+          <li><a href="https://wa.me/5519996153276" target="_blank" rel="noopener noreferrer">WhatsApp: (19) 99615-3276</a></li>
+          <li><a href="tel:+5519996153276">Telefone: (19) 99615-3276</a></li>
+          <li><a href="mailto:techdimbrasil@gmail.com">techdimbrasil@gmail.com</a></li>
+          <li><a href="#contato">Campinas — SP, Brasil</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bar">
+      <div>
+        © 2026 TECHDIM INOVA SIMPLES (I.S.) - ME. Todos os direitos reservados.
+      </div>
+      <div class="footer-bar-links">
+        <a href="loja.html">Loja</a>
+        <a href="privacidade.html">Política de privacidade</a>
+        <a href="trocas-e-devolucoes.html">Trocas e devoluções</a>
+        <button type="button" class="footer-link-btn" data-open-consent hidden>Cookies</button>
+        <span class="font-mono text-cyan" style="font-size: 0.75rem;">AMBIENTE MONITORADO & SEGURO</span>
+        <a href="#top" style="color: var(--cyan-neon);">Voltar ao Topo ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       Floating WhatsApp Widget (Always Visible)
+       ========================================================================== -->
+  <a href="https://wa.me/5519996153276?text=Ol%C3%A1%2C%20gostaria%20de%20um%20diagn%C3%B3stico%20t%C3%A9cnico%20da%20TECHDIM!" 
+     class="floating-whatsapp" target="_blank" rel="noopener noreferrer" 
+     aria-label="Fale conosco no WhatsApp">
+    <span class="live-pulse-dot" style="background: #fff; box-shadow: 0 0 8px #fff;" aria-hidden="true"></span>
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.974.545 1.785.835 2.791.835 3.181 0 5.767-2.586 5.768-5.766 0-3.18-2.586-5.768-5.768-5.768zm7.391 5.766c-.001 4.077-3.314 7.39-7.391 7.39-1.282 0-2.484-.336-3.535-.921l-4.524 1.187 1.21-4.407c-.675-1.109-1.066-2.408-1.066-3.799.001-4.077 3.314-7.39 7.391-7.39 4.077 0 7.39 3.313 7.39 7.39z"/></svg>
+    <span>WhatsApp (19) 99615-3276</span>
+  </a>
+
+  <!-- ==========================================================================
+       Service Deep Dive Modal
+       ========================================================================== -->
+  <div class="modal-overlay" id="serviceModal" role="dialog" aria-modal="true" aria-hidden="true" inert>
+    <div class="modal-card">
+      <button class="modal-close-btn" id="closeModalBtn" aria-label="Fechar Modal">✕</button>
+      <span class="badge-tag" id="modalServiceTag">ESPECIFICAÇÃO TÉCNICA</span>
+      <h3 class="font-display" id="modalServiceTitle" style="font-size: 1.8rem; margin: 0.8rem 0; color: #fff;">
+        Serviço
+      </h3>
+      <p id="modalServiceDesc" style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.65; margin-bottom: 1.5rem;">
+        Descrição do serviço.
+      </p>
+      <div style="background: rgba(3, 7, 18, 0.7); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 1.2rem; margin-bottom: 1.8rem;">
+        <h4 style="font-size: 0.88rem; color: var(--cyan-neon); margin-bottom: 0.6rem; text-transform: uppercase; font-family: var(--font-mono);">
+          Diferenciais de Engenharia:
+        </h4>
+        <ul id="modalServiceList" style="list-style: none; font-size: 0.88rem; color: #E2E8F0; display: flex; flex-direction: column; gap: 0.5rem;">
+        </ul>
+      </div>
+      <a href="#" id="modalServiceCta" class="btn-cta-whatsapp" style="width: 100%; justify-content: center;" target="_blank" rel="noopener noreferrer">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.974.545 1.785.835 2.791.835 3.181 0 5.767-2.586 5.768-5.768zm7.391 5.766c-.001 4.077-3.314 7.39-7.391 7.39-1.282 0-2.484-.336-3.535-.921l-4.524 1.187 1.21-4.407c-.675-1.109-1.066-2.408-1.066-3.799.001-4.077 3.314-7.39 7.391-7.39 4.077 0 7.39 3.313 7.39 7.39z"/></svg>
+        <span>Solicitar Proposta para este Serviço via WhatsApp</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Site Interactive Scripts -->
+  <script src="site-config.js"></script>
+  <script src="tracking.js"></script>
+  <script src="scanner.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

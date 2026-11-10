@@ -1,0 +1,17 @@
+{
+  "short_name": "Techdim",
+  "name": "TECHDIM | Cibersegurança & Cloud Architecture",
+  "description": "Engenharia de Cibersegurança Defensiva, Hardening Linux Debian 13 e GCP Serverless Architecture.",
+  "icons": [
+    {
+      "src": "assets/techdim-official-logo.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "./",
+  "background_color": "#030712",
+  "theme_color": "#030712",
+  "display": "standalone",
+  "orientation": "portrait"
+}

@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog TECHDIM</title>
+    <link>https://techdim.github.io/blog/</link>
+    <atom:link href="https://techdim.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <description>Radar diário de tecnologia, segurança e IA para empresas.</description>
+    <language>pt-BR</language>
+    <lastBuildDate>Fri, 06 Nov 2026 06:03:00 -0300</lastBuildDate>
+    <item>
+      <title>Diagnóstico de Infraestrutura: identifique gargalos antes da falha</title>
+      <link>https://techdim.github.io/blog/2026-11-06/diagnostico-de-infraestrutura-identifique-gargalos-antes/</link>
+      <guid isPermaLink="true">https://techdim.github.io/blog/2026-11-06/diagnostico-de-infraestrutura-identifique-gargalos-antes/</guid>
+      <pubDate>Fri, 06 Nov 2026 06:03:00 -0300</pubDate>
+      <category>Serviço TECHDIM</category>
+      <description>Redes corporativas com gargalos ocultos provocam lentidão crônica e quedas de produtividade na PME.</description>
+    </item>
+    <item>
+      <title>Downtime: O Custo Oculto da Parada de Sistema na Sua PME</title>
+      <link>https://techdim.github.io/blog/2026-11-06/downtime-o-custo-oculto-da-parada-de-sistema-na-sua-pme/</link>
+      <guid isPermaLink="true">https://techdim.github.io/blog/2026-11-06/downtime-o-custo-oculto-da-parada-de-sistema-na-sua-pme/</guid>
+      <pubDate>Fri, 06 Nov 2026 06:02:00 -0300</pubDate>
+      <category>Dica prática</category>
+      <description>Cada hora de sistema parado na PME pode custar milhares de reais em perdas de receita, produtividade e danos à reputação, impactando diretamente o caixa…</description>
+    </item>
+    <item>
+      <title>OpenSSH: Falha &#x27;SSHOLE&#x27; permite acesso root e é explorada ativamente</title>
+      <link>https://techdim.github.io/blog/2026-11-06/openssh-falha-sshole-permite-acesso-root-e-e-explorada/</link>
+      <guid isPermaLink="true">https://techdim.github.io/blog/2026-11-06/openssh-falha-sshole-permite-acesso-root-e-e-explorada/</guid>
+      <pubDate>Fri, 06 Nov 2026 06:01:00 -0300</pubDate>
+      <category>Alerta de segurança</category>
+      <description>A falha CVE-2026-123158 (SSHOLE) no OpenSSH permite login sem senha em contas com asterisco (*) no hash. Afeta Linux com musl C library e PAM…</description>
+    </item>
+    <item>
+      <title>Vulnerabilidade no Paint: Falha grave permite ataques remotos no Windows 11</title>
+      <link>https://techdim.github.io/blog/2026-11-06/vulnerabilidade-no-paint-falha-grave-permite-ataques-remotos/</link>
+      <guid isPermaLink="true">https://techdim.github.io/blog/2026-11-06/vulnerabilidade-no-paint-falha-grave-permite-ataques-remotos/</guid>
+      <pubDate>Fri, 06 Nov 2026 06:00:00 -0300</pubDate>
+      <category>Notícia de tecnologia</category>
+      <description>A vulnerabilidade CVE-2026-83844 no Microsoft Paint do Windows 11 permite a execução remota de código malicioso, com pontuação de gravidade 8,1 (CVSS 3.1).</description>
+    </item>
+    <item>
+      <title>Automação com IA: Reduza erros e impulsione a eficiência da sua PME</title>
+      <link>https://techdim.github.io/blog/2026-11-05/automacao-com-ia-reduza-erros-e-impulsione-a-eficiencia/</link>
+      <guid isPermaLink="true">https://techdim.github.io/blog/2026-11-05/automacao-com-ia-reduza-erros-e-impulsione-a-eficiencia/</guid>
+      <pubDate>Thu, 05 Nov 2026 06:03:00 -0300</pubDate>
+      <category>Serviço TECHDIM</category>
+      <description>Processos repetitivos e manuais consomem tempo valioso e estão sujeitos a falhas humanas, impactando a produtividade e a qualidade dos serviços.</description>
+    </item>
+    <item>
+      <title>Sinais de Vulnerabilidade: 3 alertas que sua rede pode estar emitindo agora</title>
+      <link>https://techdim.github.io/blog/2026-11-05/sinais-de-vulnerabilidade-3-alertas-que-sua-rede-pode-estar/</link>
+      <guid isPermaLink="true">https://techdim.github.io/blog/2026-11-05/sinais-de-vulnerabilidade-3-alertas-que-sua-rede-pode-estar/</guid>
+      <pubDate>Thu, 05 Nov 2026 06:02:00 -0300</pubDate>
+      <category>Dica prática</category>
+      <description>Identificar sinais precoces de vulnerabilidade é crucial para PMEs, pois permite agir antes que incidentes de segurança se tornem crises.</description>
+    </item>
+    <item>
+      <title>CWPdoor: Servidores Linux sendo backdoored via CWP web server trojanizado</title>
+      <link>https://techdim.github.io/blog/2026-11-05/cwpdoor-servidores-linux-sendo-backdoored-via-cwp-web-server/</link>
+      <guid isPermaLink="true">https://techdim.github.io/blog/2026-11-05/cwpdoor-servidores-linux-sendo-backdoored-via-cwp-web-server/</guid>
+      <pubDate>Thu, 05 Nov 2026 06:01:00 -0300</pubDate>
+      <category>Alerta de segurança</category>
+      <description>Uma nova ameaça, o malware CWPdoor, está sendo distribuída através de uma versão trojanizada do cwpsrv, o servidor web do Control Web Panel (CWP).</description>
+    </item>
+    <item>
+      <title>Vazamento de Dados: FGC notifica investidores após incidente com informações sensíveis</title>
+      <link>https://techdim.github.io/blog/2026-11-05/vazamento-de-dados-fgc-notifica-investidores-apos-incidente/</link>
+      <guid isPermaLink="true">https://techdim.github.io/blog/2026-11-05/vazamento-de-dados-fgc-notifica-investidores-apos-incidente/</guid>
+      <pubDate>Thu, 05 Nov 2026 06:00:00 -0300</pubDate>
+      <category>Notícia de tecnologia</category>
+      <description>O Fundo Garantidor de Créditos (FGC) detectou acesso não autorizado a informações pessoais e dados de pagamento de garantia na última semana de outubro.</description>
+    </item>
+    <item>
+      <title>Diagnóstico de Infraestrutura: identifique gargalos e falhas na sua rede</title>
+      <link>https://techdim.github.io/blog/2026-11-04/diagnostico-de-infraestrutura-identifique-gargalos-e-falhas/</link>
+      <guid isPermaLink="true">https://techdim.github.io/blog/2026-11-04/diagnostico-de-infraestrutura-identifique-gargalos-e-falhas/</guid>
+      <pubDate>Wed, 04 Nov 2026 06:03:00 -0300</pubDate>
+      <category>Serviço TECHDIM</category>
+      <description>Redes corporativas sofrem degradação silenciosa por gargalos de hardware, cabeamento inadequado e falhas de configuração.</description>
+    </item>
+    <item>
+      <title>WI-FI Corporativo: 3 erros comuns que ainda vemos e como evitá-los na PME</title>
+      <link>https://techdim.github.io/blog/2026-11-04/wi-fi-corporativo-3-erros-comuns-que-ainda-vemos-e-como/</link>
+      <guid isPermaLink="true">https://techdim.github.io/blog/2026-11-04/wi-fi-corporativo-3-erros-comuns-que-ainda-vemos-e-como/</guid>
+      <pubDate>Wed, 04 Nov 2026 06:02:00 -0300</pubDate>
+      <category>Dica prática</category>
+      <description>Redes Wi-Fi corporativas mal configuradas são portas de entrada para ataques e vazamento de dados críticos.</description>
+    </item>
+    <item>
+      <title>Phishing: Campanha de Google Calendar burla MFA e sequestra sessões corporativas</title>
+      <link>https://techdim.github.io/blog/2026-11-04/phishing-campanha-de-google-calendar-burla-mfa-e-sequestra/</link>
+      <guid isPermaLink="true">https://techdim.github.io/blog/2026-11-04/phishing-campanha-de-google-calendar-burla-mfa-e-sequestra/</guid>
+      <pubDate>Wed, 04 Nov 2026 06:01:00 -0300</pubDate>
+      <category>Alerta de segurança</category>
+      <description>Uma campanha de phishing sofisticada, ativa desde meados de 2026, sequestra sessões ativas de Google de usuários corporativos, contornando a Autenticação…</description>
+    </item>
+    <item>
+      <title>Anatel bloqueia SMS fraudulentos: novas regras para proteção corporativa</title>
+      <link>https://techdim.github.io/blog/2026-11-04/anatel-bloqueia-sms-fraudulentos-novas-regras-para-protecao/</link>
+      <guid isPermaLink="true">https://techdim.github.io/blog/2026-11-04/anatel-bloqueia-sms-fraudulentos-novas-regras-para-protecao/</guid>
+      <pubDate>Wed, 04 Nov 2026 06:00:00 -0300</pubDate>
+      <category>Notícia de tecnologia</category>
+      <description>Anatel determinou o bloqueio de SMS corporativos (A2P) enviados por códigos curtos não cadastrados, visando combater golpes de mensagens falsas.</description>
+    </item>
+    <item>
+      <title>Migração de Servidor: modernize sua estrutura sem parar a operação da sua PME</title>
+      <link>https://techdim.github.io/blog/2026-11-03/migracao-de-servidor-modernize-sua-estrutura-sem-parar/</link>
+      <guid isPermaLink="true">https://techdim.github.io/blog/2026-11-03/migracao-de-servidor-modernize-sua-estrutura-sem-parar/</guid>
+      <pubDate>Tue, 03 Nov 2026 06:03:00 -0300</pubDate>
+      <category>Serviço TECHDIM</category>
+      <description>Trocar o servidor antigo sem interromper o expediente evita prejuízos e mantém a equipe produtiva durante o processo de modernização tecnológica.</description>
+    </item>
+    <item>
+      <title>IA Segura: Implemente Inteligência Artificial sem expor dados de clientes</title>
+      <link>https://techdim.github.io/blog/2026-11-03/ia-segura-implemente-inteligencia-artificial-sem-expor-dados/</link>
+      <guid isPermaLink="true">https://techdim.github.io/blog/2026-11-03/ia-segura-implemente-inteligencia-artificial-sem-expor-dados/</guid>
+      <pubDate>Tue, 03 Nov 2026 06:02:00 -0300</pubDate>
+      <category>Dica prática</category>
+      <description>A integração de IA em PMEs otimiza processos, mas exige atenção rigorosa à privacidade para evitar vazamentos de dados sensíveis de clientes.</description>
+    </item>
+    <item>
+      <title>LLMjacking: Google alerta sobre ataques que geram até US$1 milhão em custos na nuvem</title>
+      <link>https://techdim.github.io/blog/2026-11-03/llmjacking-google-alerta-sobre-ataques-que-geram-ate-us-1/</link>
+      <guid isPermaLink="true">https://techdim.github.io/blog/2026-11-03/llmjacking-google-alerta-sobre-ataques-que-geram-ate-us-1/</guid>
+      <pubDate>Tue, 03 Nov 2026 06:01:00 -0300</pubDate>
+      <category>Alerta de segurança</category>
+      <description>Google alertou sobre LLMjacking, onde atacantes sequestram acesso a LLMs para usar recursos caros de computação em nuvem, gerando até US$1 milhão em…</description>
+    </item>
+    <item>
+      <title>Falha de Segurança no Smart Sampa expõe 17 mil câmeras e dados sensíveis</title>
+      <link>https://techdim.github.io/blog/2026-11-03/falha-de-seguranca-no-smart-sampa-expoe-17-mil-cameras/</link>
+      <guid isPermaLink="true">https://techdim.github.io/blog/2026-11-03/falha-de-seguranca-no-smart-sampa-expoe-17-mil-cameras/</guid>
+      <pubDate>Tue, 03 Nov 2026 06:00:00 -0300</pubDate>
+      <category>Notícia de tecnologia</category>
+      <description>A nova brecha no Smart Sampa permitiu acesso indevido a 17 mil câmeras, expondo imagens de ruas onde residem autoridades e dados sensíveis.</description>
+    </item>
+    <item>
+      <title>Governança de Acesso: Reduza riscos com controle estrito de privilégios na sua PME</title>
+      <link>https://techdim.github.io/blog/2026-11-02/governanca-de-acesso-reduza-riscos-com-controle-estrito/</link>
+      <guid isPermaLink="true">https://techdim.github.io/blog/2026-11-02/governanca-de-acesso-reduza-riscos-com-controle-estrito/</guid>
+      <pubDate>Mon, 02 Nov 2026 06:03:00 -0300</pubDate>
+      <category>Serviço TECHDIM</category>
+      <description>A maioria dos ataques cibernéticos explora credenciais fracas ou acessos excessivos, transformando usuários comuns em portas de entrada para brechas…</description>
+    </item>
+    <item>
+      <title>Offboarding: O acesso que ficou aberto é porta para riscos na sua PME</title>
+      <link>https://techdim.github.io/blog/2026-11-02/offboarding-o-acesso-que-ficou-aberto-e-porta-para-riscos/</link>
+      <guid isPermaLink="true">https://techdim.github.io/blog/2026-11-02/offboarding-o-acesso-que-ficou-aberto-e-porta-para-riscos/</guid>
+      <pubDate>Mon, 02 Nov 2026 06:02:00 -0300</pubDate>
+      <category>Dica prática</category>
+      <description>O processo de offboarding é essencial para a segurança da informação, garantindo que ex-colaboradores não mantenham acessos a sistemas e dados.</description>
+    </item>
+    <item>
+      <title>Ransomware C3RB3R: Synology alerta sobre ataques a dispositivos NAS desatualizados</title>
+      <link>https://techdim.github.io/blog/2026-11-02/ransomware-c3rb3r-synology-alerta-sobre-ataques/</link>
+      <guid isPermaLink="true">https://techdim.github.io/blog/2026-11-02/ransomware-c3rb3r-synology-alerta-sobre-ataques/</guid>
+      <pubDate>Mon, 02 Nov 2026 06:01:00 -0300</pubDate>
+      <category>Alerta de segurança</category>
+      <description>A Synology alertou clientes para atualizarem seus dispositivos NAS imediatamente devido a um aumento nos ataques de ransomware C3RB3R, que exploram…</description>
+    </item>
+    <item>
+      <title>IA e IoT: O perigo dos &quot;vermes&quot; digitais autônomos em dispositivos conectados</title>
+      <link>https://techdim.github.io/blog/2026-11-02/ia-e-iot-o-perigo-dos-vermes-digitais-autonomos/</link>
+      <guid isPermaLink="true">https://techdim.github.io/blog/2026-11-02/ia-e-iot-o-perigo-dos-vermes-digitais-autonomos/</guid>
+      <pubDate>Mon, 02 Nov 2026 06:00:00 -0300</pubDate>
+      <category>Notícia de tecnologia</category>
+      <description>A Anthropic alerta sobre softwares maliciosos com IA capazes de infectar e se espalhar de forma autônoma em aparelhos de Internet das Coisas (IoT).</description>
+    </item>
+    <item>
+      <title>Backup gerenciado: garanta que sua PME consiga recuperar dados quando necessário</title>
+      <link>https://techdim.github.io/blog/2026-11-01/backup-gerenciado-garanta-que-sua-pme-consiga-recuperar/</link>
+      <guid isPermaLink="true">https://techdim.github.io/blog/2026-11-01/backup-gerenciado-garanta-que-sua-pme-consiga-recuperar/</guid>
+      <pubDate>Sun, 01 Nov 2026 06:03:00 -0300</pubDate>
+      <category>Serviço TECHDIM</category>
+      <description>Ter arquivos copiados não garante recuperação se o processo nunca foi validado por testes de restauração.</description>
+    </item>
+    <item>
+      <title>Shadow IT: O perigo invisível que sua PME precisa mapear e controlar</title>
+      <link>https://techdim.github.io/blog/2026-11-01/shadow-it-o-perigo-invisivel-que-sua-pme-precisa-mapear/</link>
+      <guid isPermaLink="true">https://techdim.github.io/blog/2026-11-01/shadow-it-o-perigo-invisivel-que-sua-pme-precisa-mapear/</guid>
+      <pubDate>Sun, 01 Nov 2026 06:02:00 -0300</pubDate>
+      <category>Dica prática</category>
+      <description>Shadow IT refere-se a softwares ou serviços de TI usados na empresa sem aprovação ou conhecimento da equipe de TI, elevando riscos operacionais.</description>
+    </item>
+    <item>
+      <title>Ivanti Connect Secure: CISA alerta sobre exploração ativa de falhas críticas</title>
+      <link>https://techdim.github.io/blog/2026-11-01/ivanti-connect-secure-cisa-alerta-sobre-exploracao-ativa/</link>
+      <guid isPermaLink="true">https://techdim.github.io/blog/2026-11-01/ivanti-connect-secure-cisa-alerta-sobre-exploracao-ativa/</guid>
+      <pubDate>Sun, 01 Nov 2026 06:01:00 -0300</pubDate>
+      <category>Alerta de segurança</category>
+      <description>A CISA (Agência de Cibersegurança e Infraestrutura dos EUA) adicionou falhas do Ivanti Connect Secure (ICS) ao catálogo KEV, devido à exploração ativa.</description>
+    </item>
+    <item>
+      <title>IA Corporativa: Entire traz hospedagem Git com IA e infraestrutura local para o Brasil</title>
+      <link>https://techdim.github.io/blog/2026-11-01/ia-corporativa-entire-traz-hospedagem-git-com-ia/</link>
+      <guid isPermaLink="true">https://techdim.github.io/blog/2026-11-01/ia-corporativa-entire-traz-hospedagem-git-com-ia/</guid>
+      <pubDate>Sun, 01 Nov 2026 06:00:00 -0300</pubDate>
+      <category>Notícia de tecnologia</category>
+      <description>Entire, plataforma Git do ex-CEO do GitHub, Thomas Dohmke, expandiu suas operações para o Brasil com infraestrutura de servidores locais para hospedagem…</description>
+    </item>
+    <item>
+      <title>Infraestrutura e redes: garanta estabilidade e segurança para sua PME</title>
+      <link>https://techdim.github.io/blog/2026-10-31/infraestrutura-e-redes-garanta-estabilidade-e-seguranca/</link>
+      <guid isPermaLink="true">https://techdim.github.io/blog/2026-10-31/infraestrutura-e-redes-garanta-estabilidade-e-seguranca/</guid>
+      <pubDate>Sat, 31 Oct 2026 06:03:00 -0300</pubDate>
+      <category>Serviço TECHDIM</category>
+      <description>Redes instáveis e gargalos de hardware geram lentidão diária e interrompem a operação das equipes na sua empresa.</description>
+    </item>
+    <item>
+      <title>Phishing: Como identificar e se defender de ataques que vão além do e-mail mal escrito</title>
+      <link>https://techdim.github.io/blog/2026-10-31/phishing-como-identificar-e-se-defender-de-ataques-que-vao/</link>
+      <guid isPermaLink="true">https://techdim.github.io/blog/2026-10-31/phishing-como-identificar-e-se-defender-de-ataques-que-vao/</guid>
+      <pubDate>Sat, 31 Oct 2026 06:02:00 -0300</pubDate>
+      <category>Dica prática</category>
+      <description>Ataques de phishing evoluíram e agora utilizam técnicas sofisticadas, como engenharia social e falsificação de identidade, para enganar usuários.</description>
+    </item>
+    <item>
+      <title>Vulnerabilidade Ivanti: Falhas em cadeia concedem acesso root não autenticado</title>
+      <link>https://techdim.github.io/blog/2026-10-31/vulnerabilidade-ivanti-falhas-em-cadeia-concedem-acesso-root/</link>
+      <guid isPermaLink="true">https://techdim.github.io/blog/2026-10-31/vulnerabilidade-ivanti-falhas-em-cadeia-concedem-acesso-root/</guid>
+      <pubDate>Sat, 31 Oct 2026 06:01:00 -0300</pubDate>
+      <category>Alerta de segurança</category>
+      <description>A CISA adicionou falhas críticas no Ivanti Connect Secure (ICS) ao seu catálogo KEV após exploração ativa em campo, revelando uma cadeia de ataque.</description>
+    </item>
+    <item>
+      <title>Entire: Plataforma Git com IA e servidores locais no Brasil impulsiona devs</title>
+      <link>https://techdim.github.io/blog/2026-10-31/entire-plataforma-git-com-ia-e-servidores-locais-no-brasil/</link>
+      <guid isPermaLink="true">https://techdim.github.io/blog/2026-10-31/entire-plataforma-git-com-ia-e-servidores-locais-no-brasil/</guid>
+      <pubDate>Sat, 31 Oct 2026 06:00:00 -0300</pubDate>
+      <category>Notícia de tecnologia</category>
+      <description>A Entire, nova plataforma de hospedagem Git do ex-CEO do GitHub, Thomas Dohmke, expandiu operações para o Brasil com infraestrutura de servidores locais.</description>
+    </item>
+    <item>
+      <title>Hardening de Servidores: Não deixe sua infraestrutura ser um alvo fácil</title>
+      <link>https://techdim.github.io/blog/2026-10-30/hardening-de-servidores-nao-deixe-sua-infraestrutura-ser/</link>
+      <guid isPermaLink="true">https://techdim.github.io/blog/2026-10-30/hardening-de-servidores-nao-deixe-sua-infraestrutura-ser/</guid>
+      <pubDate>Fri, 30 Oct 2026 06:03:00 -0300</pubDate>
+      <category>Serviço TECHDIM</category>
+      <description>Servidores e estações com configurações padrão de fábrica ou desatualizadas são portas abertas para ataques cibernéticos, mesmo com antivírus e firewall.</description>
+    </item>
+    <item>
+      <title>Atualização de Software: Controle de segurança essencial para sua PME</title>
+      <link>https://techdim.github.io/blog/2026-10-30/atualizacao-de-software-controle-de-seguranca-essencial/</link>
+      <guid isPermaLink="true">https://techdim.github.io/blog/2026-10-30/atualizacao-de-software-controle-de-seguranca-essencial/</guid>
+      <pubDate>Fri, 30 Oct 2026 06:02:00 -0300</pubDate>
+      <category>Dica prática</category>
+      <description>Software desatualizado é uma porta aberta para ataques. Manter sistemas e aplicativos em dia é a primeira linha de defesa contra vulnerabilidades…</description>
+    </item>
+    <item>
+      <title>Vulnerabilidade GitLab: Falha crítica CVE-2026-97229 é explorada ativamente</title>
+      <link>https://techdim.github.io/blog/2026-10-30/vulnerabilidade-gitlab-falha-critica-cve-2026-97229/</link>
+      <guid isPermaLink="true">https://techdim.github.io/blog/2026-10-30/vulnerabilidade-gitlab-falha-critica-cve-2026-97229/</guid>
+      <pubDate>Fri, 30 Oct 2026 06:01:00 -0300</pubDate>
+      <category>Alerta de segurança</category>
+      <description>CISA confirma exploração ativa da falha crítica CVE-2026-97229 no GitLab, que permite a execução remota de código por atacantes não autenticados.</description>
+    </item>
+    <item>
+      <title>IA Gemini: Edição interativa de documentos no chat otimiza fluxos de trabalho</title>
+      <link>https://techdim.github.io/blog/2026-10-30/ia-gemini-edicao-interativa-de-documentos-no-chat-otimiza/</link>
+      <guid isPermaLink="true">https://techdim.github.io/blog/2026-10-30/ia-gemini-edicao-interativa-de-documentos-no-chat-otimiza/</guid>
+      <pubDate>Fri, 30 Oct 2026 06:00:00 -0300</pubDate>
+      <category>Notícia de tecnologia</category>
+      <description>Google Gemini agora permite criar, visualizar e editar documentos (PDFs, Docs, Sheets, apresentações) diretamente no chat, sem sair da interface.</description>
+    </item>
+    <item>
+      <title>Suporte de TI: Sua PME precisa de um time proativo, não de um &#x27;quebra-galho&#x27;.</title>
+      <link>https://techdim.github.io/blog/2026-10-29/suporte-de-ti-sua-pme-precisa-de-um-time-proativo-nao/</link>
+      <guid isPermaLink="true">https://techdim.github.io/blog/2026-10-29/suporte-de-ti-sua-pme-precisa-de-um-time-proativo-nao/</guid>
+      <pubDate>Thu, 29 Oct 2026 06:03:00 -0300</pubDate>
+      <category>Serviço TECHDIM</category>
+      <description>Muitas PMEs enfrentam interrupções e lentidão por falta de um suporte de TI dedicado e estratégico, que vá além do reativo.</description>
+    </item>
+    <item>
+      <title>LGPD na prática: 4 itens que o auditor de dados pede primeiro na sua PME</title>
+      <link>https://techdim.github.io/blog/2026-10-29/lgpd-na-pratica-4-itens-que-o-auditor-de-dados-pede-primeiro/</link>
+      <guid isPermaLink="true">https://techdim.github.io/blog/2026-10-29/lgpd-na-pratica-4-itens-que-o-auditor-de-dados-pede-primeiro/</guid>
+      <pubDate>Thu, 29 Oct 2026 06:02:00 -0300</pubDate>
+      <category>Dica prática</category>
+      <description>Auditorias de LGPD focam em evidências de conformidade, não apenas em políticas escritas. Prepare-se para mostrar como sua empresa protege dados.</description>
+    </item>
+    <item>
+      <title>Cisco: Zero-day em firewalls ASA/FTD explorado para derrubar dispositivos SSL VPN</title>
+      <link>https://techdim.github.io/blog/2026-10-29/cisco-zero-day-em-firewalls-asa-ftd-explorado-para-derrubar/</link>
+      <guid isPermaLink="true">https://techdim.github.io/blog/2026-10-29/cisco-zero-day-em-firewalls-asa-ftd-explorado-para-derrubar/</guid>
+      <pubDate>Thu, 29 Oct 2026 06:01:00 -0300</pubDate>
+      <category>Alerta de segurança</category>
+      <description>Cisco lança patches para CVE-2026-76418, uma vulnerabilidade zero-day de alta gravidade em firewalls ASA e FTD, já explorada ativamente.</description>
+    </item>
+    <item>
+      <title>Cabos Submarinos: Alerta nos EUA sobre risco de sabotagem à infraestrutura global da internet</title>
+      <link>https://techdim.github.io/blog/2026-10-29/cabos-submarinos-alerta-nos-eua-sobre-risco-de-sabotagem/</link>
+      <guid isPermaLink="true">https://techdim.github.io/blog/2026-10-29/cabos-submarinos-alerta-nos-eua-sobre-risco-de-sabotagem/</guid>
+      <pubDate>Thu, 29 Oct 2026 06:00:00 -0300</pubDate>
+      <category>Notícia de tecnologia</category>
+      <description>Navios chineses próximos a cabos submarinos no Pacífico acendem alerta nos EUA sobre possível sabotagem à infraestrutura que sustenta parte crucial da…</description>
+    </item>
+    <item>
+      <title>Infraestrutura e redes: Wi-Fi, firewall e cabeamento organizados para sua empresa</title>
+      <link>https://techdim.github.io/blog/2026-10-28/infraestrutura-e-redes-wi-fi-firewall-e-cabeamento/</link>
+      <guid isPermaLink="true">https://techdim.github.io/blog/2026-10-28/infraestrutura-e-redes-wi-fi-firewall-e-cabeamento/</guid>
+      <pubDate>Wed, 28 Oct 2026 06:03:00 -0300</pubDate>
+      <category>Serviço TECHDIM</category>
+      <description>Redes instáveis e pontos cegos de Wi-Fi travam o atendimento e geram frustração na equipe todos os dias.</description>
+    </item>
+    <item>
+      <title>MFA obrigatório: por que senha forte já não basta na sua empresa</title>
+      <link>https://techdim.github.io/blog/2026-10-28/mfa-obrigatorio-por-que-senha-forte-ja-nao-basta-na-sua/</link>
+      <guid isPermaLink="true">https://techdim.github.io/blog/2026-10-28/mfa-obrigatorio-por-que-senha-forte-ja-nao-basta-na-sua/</guid>
+      <pubDate>Wed, 28 Oct 2026 06:02:00 -0300</pubDate>
+      <category>Dica prática</category>
+      <description>Senhas complexas caem em phishing e vazamentos corporativos, tornando a autenticação multifator indispensável para bloquear invasões.</description>
+    </item>
+    <item>
+      <title>Vulnerabilidades de Infraestrutura: Ataques exploram falhas críticas em redes</title>
+      <link>https://techdim.github.io/blog/2026-10-28/vulnerabilidades-de-infraestrutura-ataques-exploram-falhas/</link>
+      <guid isPermaLink="true">https://techdim.github.io/blog/2026-10-28/vulnerabilidades-de-infraestrutura-ataques-exploram-falhas/</guid>
+      <pubDate>Wed, 28 Oct 2026 06:01:00 -0300</pubDate>
+      <category>Alerta de segurança</category>
+      <description>Atacantes estão explorando ativamente vulnerabilidades em infraestruturas de rede críticas, como firewalls e VPNs, através de falhas PHP2Shell em…</description>
+    </item>
+    <item>
+      <title>Discord: Mensagens de servidores públicos agora pesquisáveis no Google</title>
+      <link>https://techdim.github.io/blog/2026-10-28/discord-mensagens-de-servidores-publicos-agora-pesquisaveis/</link>
+      <guid isPermaLink="true">https://techdim.github.io/blog/2026-10-28/discord-mensagens-de-servidores-publicos-agora-pesquisaveis/</guid>
+      <pubDate>Wed, 28 Oct 2026 06:00:00 -0300</pubDate>
+      <category>Notícia de tecnologia</category>
+      <description>Discord passará a indexar mensagens de servidores públicos (tipo &#x27;Descobrir&#x27;) em mecanismos de busca, como o Google, a partir de dezembro.</description>
+    </item>
+  </channel>
+</rss>
